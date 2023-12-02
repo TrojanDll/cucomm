@@ -1,0 +1,44 @@
+import React from "react";
+import styled, { css } from "styled-components";
+
+const StyledButton = styled.button`
+  border: none;
+  padding: ${({ padding }) => padding || "12px 32px"};
+  border-radius: 9999px;
+  font-weight: ${({ fontWeight }) => fontWeight || "500"};
+  color: ${({ color }) => color || "white"};
+
+  &:focus {
+    outline: none;
+  }
+
+  ${(props) =>
+    props.primary &&
+    css`
+      color: ${props.color || "white"};
+      background: ${props.background || "var(--main-color)"};
+
+      &:hover {
+        background: ${props.backgroundHover || "var(--hover-color)"};
+      }
+    `}
+
+  ${(props) =>
+    props.outlined &&
+    css`
+      color: ${props.color || "var(--main-color)"};
+      background: transparent;
+      border: 1px solid ${props.borderColor || "var(--main-color)"};
+
+      &:hover {
+        border-color: ${props.borderHover || "var(--hover-color)"};
+        color: ${props.hoverColor || "var(--hover-color)"};
+      }
+    `}
+`;
+
+const CustomButton = (props) => {
+  return <StyledButton {...props} />;
+};
+
+export default CustomButton;

@@ -4,7 +4,7 @@ import scaleImg from "./../assets/img/scale-us.png";
 import listPoint from "./../assets/img/icons/list-point.svg";
 import CustomContainer from "./CustomContainer";
 import CustomButton from "../ui/CustomButton";
-import CustomSign from "./CustomSign";
+import CustomSign from "../ui/CustomSign";
 
 const StyledScaleUsSection = styled.section`
   background-color: var(--lightest-grey-color);
@@ -33,7 +33,6 @@ const StyledScaleUsSection = styled.section`
   .scale__list-item {
     margin-top: 16px;
     display: flex;
-    align-items: center;
     column-gap: 24px;
     font-size: 18px;
     line-height: 24px;
@@ -47,6 +46,7 @@ const StyledScaleUsSection = styled.section`
   .scale__list-item::before {
     content: "";
     display: block;
+    margin-top: 8px;
     width: 8px;
     height: 9px;
     background: url(${listPoint}) center center/cover no-repeat;
@@ -66,7 +66,9 @@ const ScaleUsSection = () => {
         <div className="scale-wrapper">
           <img src={scaleImg} alt="scale" className="scale__img" />
           <div className="scale__text-wrapper">
-            <CustomSign className="scale__sign">SOLUTION</CustomSign>
+            <CustomSign className="scale__sign" width="90px">
+              SOLUTION
+            </CustomSign>
 
             <h2 className="scale__title">
               Scale as much as you want without limits

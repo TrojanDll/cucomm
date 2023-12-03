@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   display: block;
+  position: relative;
   margin: 0 auto;
   width: 1280px;
 

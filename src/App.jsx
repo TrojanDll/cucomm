@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import PromoSection from "./components/PromoSection";
 import ScaleUsSection from "./components/ScaleUsSection";
 import BenefitsSection from "./components/BenefitsSection";
+import ProductSection from "./components/ProductSection";
+import KillerFeatureSection from "./components/KillerFeatureSection";
 
 function App() {
   const [isPromoFilter, setIsPromoFilte] = useState(true);
@@ -19,6 +21,8 @@ function App() {
         <PromoSection isPromoFilter={isPromoFilter} />
         <ScaleUsSection />
         <BenefitsSection />
+        <ProductSection />
+        <KillerFeatureSection />
       </main>
     </>
   );

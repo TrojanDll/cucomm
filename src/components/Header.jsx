@@ -5,11 +5,14 @@ import CustomButton from "../ui/CustomButton";
 import Sidebar from "./Sidebar";
 
 const StyledHeader = styled.header`
+  background-color: #ffffff;
+
   .header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 32px 40px;
+    background-color: #ffffff;
   }
 
   .header__logo {
@@ -133,17 +136,35 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = () => {
+const Header = ({ toggleIsPromoFilter }) => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
   function switchSidbar(e) {
     e.target.classList.toggle("navToggle_opened");
     setSidebarOpened(!sidebarOpened);
+    toggleIsPromoFilter();
   }
 
   return (
-    <StyledHeader>
-      <div className="header__wrapper">
+    <StyledHeader
+      style={
+        sidebarOpened ? { background: "#ffffff", paddingTop: "116px" } : {}
+      }
+    >
+      <div
+        className="header__wrapper"
+        style={
+          sidebarOpened
+            ? {
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                background: "#ffffff",
+              }
+            : {}
+        }
+      >
         <div className="header__logo">
           <SpriteIcon id="icon-logo" className="header__logo-img" />
         </div>

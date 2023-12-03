@@ -6,9 +6,9 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   width: 1280px;
 
-  @media (max-width: 1540px) {
+  /* @media (max-width: 1540px) {
     width: 1140px;
-  }
+  } */
 
   @media (max-width: 1200px) {
     width: 960px;

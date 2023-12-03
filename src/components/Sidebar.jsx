@@ -4,13 +4,15 @@ import CustomButton from "../ui/CustomButton";
 
 const StyledSidebar = styled.header`
   position: fixed;
+  z-index: 100;
   padding-bottom: 48px;
   overflow-y: scroll;
   top: 104px;
   /* left: -100%; */
   height: calc(100% - 104px);
   width: 100%;
-  transition: left 0.3s;
+  background: #ffffff;
+  transition: left 0.2s;
 
   .sidebar_opened {
     left: -100%;

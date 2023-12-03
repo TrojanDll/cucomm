@@ -36,6 +36,17 @@ const StyledButton = styled.button`
         color: ${props.hoverColor || "var(--hover-color)"};
       }
     `}
+  
+    ${(props) =>
+    props.fixedSize &&
+    css`
+      padding: 0;
+      width: ${props.width || "100px"};
+      height: ${props.height || "100px"};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `}
 `;
 
 const CustomButton = (props) => {

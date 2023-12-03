@@ -7,6 +7,7 @@ const StyledButton = styled.button`
   border-radius: 9999px;
   font-weight: ${({ fontWeight }) => fontWeight || "500"};
   color: ${({ color }) => color || "white"};
+  font-size: ${({ fontSize }) => fontSize || "18px"};
 
   &:focus {
     outline: none;

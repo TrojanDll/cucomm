@@ -1,12 +1,18 @@
-import React from "react";
-import Icons from "./../assets/img/sprite.svg";
+import React from 'react';
+import Icons from './../assets/img/sprite.svg';
 
-const SpriteIcon = ({ id, className }) => {
-  return (
-    <svg className={className}>
-      <use href={Icons + "#" + id}></use>
-    </svg>
-  );
-};
+class SpriteIcon extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { id, className } = this.props;
+    return (
+      <svg className={className}>
+        <use href={Icons + '#' + id}></use>
+      </svg>
+    );
+  }
+}
 
 export default SpriteIcon;

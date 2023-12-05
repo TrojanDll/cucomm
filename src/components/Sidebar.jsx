@@ -45,57 +45,18 @@ const styles = {
     lineHeight: '40px',
   },
   sidebar__login__loginBtn: {
-    fontWeight: 500,
+    fontWeight: 400,
     background: 'transparent',
   },
   sidebar__login__signupBtn: {
     background: 'var(--main-color)',
     color: '#ffffff',
-    fontWeight: 600,
+    fontWeight: 500,
     '&:hover': {
       background: 'var(--hover-color)',
     },
   },
 };
-
-// const StyledSidebar = styled.header`
-//   .sidebar {
-//     position: fixed;
-//     z-index: 100;
-//     padding-bottom: 48px;
-//     overflow-y: scroll;
-//     top: 104px;
-//     height: calc(100% - 104px);
-//     width: 100%;
-//     background: #ffffff;
-//     transition: left 0.2s;
-//   }
-
-//   .sidebar_opened {
-//     left: -100%;
-//   }
-
-//   .sidebar__navLink {
-//     margin-top: 24px;
-//     display: block;
-//     color: var(--text-color);
-//     font-size: 32px;
-//     font-weight: 300;
-//     line-height: 40px;
-//     text-align: center;
-//     cursor: pointer;
-//   }
-
-//   .sidebar__navLink:first-child {
-//     margin-top: 0;
-//   }
-
-//   .sidebar__login__btn {
-//     display: block;
-//     margin: 0 auto;
-//     margin-top: 10px;
-//   }
-// `;
 
 class Sidebar extends React.Component {
   constructor(props) {

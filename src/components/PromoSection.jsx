@@ -247,12 +247,13 @@ class PromoSection extends React.Component {
 
           <div className={classes.promo__imgs}>
             <img
-              style={isPromoFilter ? {} : { filter: 'none' }}
+              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
               className={`${classes.promo__img} ${classes.promo__img_1}`}
               src={promoImg1}
               alt="promo-image"
             />
             <img
+              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
               className={`${classes.promo__img} ${classes.promo__img_2}`}
               src={promoImg2}
               alt="promo-image"

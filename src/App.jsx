@@ -20,11 +20,11 @@ function App() {
       <Header toggleIsPromoFilter={toggleIsPromoFilter} />
       <main>
         <PromoSection isPromoFilter={isPromoFilter} />
-        {/* <ScaleUsSection />
+        <ScaleUsSection />
         <BenefitsSection />
         <ProductSection />
         <KillerFeatureSection />
-        <AgenciesSection /> */}
+        <AgenciesSection />
       </main>
     </>
   );

@@ -1,8 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { withStyles } from '@material-ui/styles';
 import CustomContainer from './CustomContainer';
-import CustomSign from '../ui/CustomSign';
 import featureImg1 from './../assets/img/feature-img-1.jpg';
 import featureImg2 from './../assets/img/feature-img-2.jpg';
 
@@ -14,6 +12,19 @@ const styles = {
   },
   feature__sign: {
     margin: '0 auto',
+    width: '131px',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '9999px',
+    textTransform: 'uppercase',
+    fontFamily: 'BarlowCondensed',
+    letterSpacing: '1.4px',
+    height: '40px',
+    fontSize: '14px',
+    fontWeight: 500,
+    color: 'var(--main-color)',
+    background: '#ffffff',
+    padding: '0 16px',
   },
   feature__title: {
     marginTop: '24px',
@@ -104,9 +115,7 @@ class KillerFeatureSection extends React.Component {
     return (
       <section className={classes.feature}>
         <CustomContainer>
-          <CustomSign className={classes.feature__sign} width="131px">
-            KILLER FEATURE
-          </CustomSign>
+          <div className={classes.feature__sign}>KILLER FEATURE</div>
 
           <h2 className={classes.feature__title}>Common inbox</h2>
           <div className={classes.feature__descr}>

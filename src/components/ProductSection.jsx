@@ -1,6 +1,5 @@
 import React from 'react';
 import CustomContainer from './CustomContainer';
-import CustomSign from '../ui/CustomSign';
 import listPoint from './../assets/img/icons/list-point.svg';
 import { withStyles } from '@material-ui/styles';
 
@@ -12,6 +11,19 @@ const styles = {
   },
   product__sign: {
     margin: '0 auto',
+    width: '85px',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '9999px',
+    textTransform: 'uppercase',
+    fontFamily: 'BarlowCondensed',
+    letterSpacing: '1.4px',
+    height: '40px',
+    fontSize: '14px',
+    fontWeight: 500,
+    color: 'var(--main-color)',
+    background: '#ffffff',
+    padding: '0 16px',
   },
   product__title: {
     marginTop: '24px',
@@ -70,9 +82,7 @@ class ProductSection extends React.Component {
     return (
       <section className={classes.product}>
         <CustomContainer>
-          <CustomSign className={classes.product__sign} width="85px">
-            PRODUCT
-          </CustomSign>
+          <div className={classes.product__sign}>PRODUCT</div>
 
           <div className={classes.product__title}>Better than competitors</div>
 

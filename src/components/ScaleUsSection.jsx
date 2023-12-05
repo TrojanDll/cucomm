@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import scaleImg from './../assets/img/scale-us.png';
 import listPoint from './../assets/img/icons/list-point.svg';
 import CustomContainer from './CustomContainer';
-import CustomSign from '../ui/CustomSign';
 import { withStyles } from '@material-ui/styles';
 
 const styles = {
@@ -20,6 +18,18 @@ const styles = {
   },
   scale__sign: {
     width: '90px',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '9999px',
+    textTransform: 'uppercase',
+    fontFamily: 'BarlowCondensed',
+    letterSpacing: '1.4px',
+    height: '40px',
+    fontSize: '14px',
+    fontWeight: 500,
+    color: 'var(--main-color)',
+    background: '#ffffff',
+    padding: '0 16px',
   },
   scale__title: {
     marginTop: '24px',
@@ -98,7 +108,9 @@ class ScaleUsSection extends React.Component {
           <div className={classes.scaleWrapper}>
             <img src={scaleImg} alt="scale" className="scale__img" />
             <div className={classes.scale__textWrapper}>
-              <CustomSign className={classes.scale__sign}>SOLUTION</CustomSign>
+              <div className={`${classes.scale__sign} ${classes.sign}`}>
+                SOLUTION
+              </div>
 
               <h2 className={classes.scale__title}>
                 Scale as much as you want without limits

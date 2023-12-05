@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { withStyles } from '@material-ui/styles';
 import CustomContainer from './CustomContainer';
 import heartImg from './../assets/img/heart.png';
@@ -89,96 +88,6 @@ const styles = {
     lineHeight: '32px',
   },
 };
-
-const StyledAgenciesSection = styled.section`
-  /* padding-top: 550px;
-  padding-bottom: 112px;
-  .agencies__img {
-    position: absolute;
-    filter: drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2));
-    border-radius: 24px;
-  }
-  .agencies__img_1 {
-    top: -638px;
-    left: 0;
-    width: 843px;
-    height: 436px;
-  }
-
-  .agencies__img_2 {
-    top: -462px;
-    right: 0;
-    width: 625px;
-    height: 350px;
-  }
-
-  .agencies__img_man {
-    position: absolute;
-    width: 188px;
-    height: 188px;
-    border-radius: 24px;
-    left: 109px;
-    top: -242px;
-  }
-
-  .agencies__title {
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 48px;
-    text-align: center;
-  }
-
-  .agencies__title img {
-    margin-top: 6px;
-    height: 34px;
-  }
-
-  .agencies__descr {
-    margin-top: 16px;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 300;
-    line-height: 32px;
-  }
-
-  .agencies__list {
-    margin-top: 44px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .agencies__list_item {
-    position: relative;
-    width: 298px;
-  }
-
-  .agencies__list_item::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: block;
-    width: 1px;
-    height: 168px;
-    background: var(--light-grey-color);
-  }
-
-  .agencies__list_item:last-child:after {
-    display: none;
-  }
-
-  .agencies__list_item__img {
-    width: 120px;
-    height: 112px;
-  }
-
-  .agencies__list_item__descr {
-    margin-top: 8px;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 32px;
-  } */
-`;
 
 class AgenciesSection extends React.Component {
   constructor(props) {

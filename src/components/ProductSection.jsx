@@ -1,8 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import CustomContainer from './CustomContainer';
 import CustomSign from '../ui/CustomSign';
-import CustomButton from '../ui/CustomButton';
 import listPoint from './../assets/img/icons/list-point.svg';
 import { withStyles } from '@material-ui/styles';
 
@@ -43,67 +41,23 @@ const styles = {
       marginTop: '8px',
       width: '8px',
       height: '9px',
-      background: 'url(${listPoint}) center center/cover no-repeat',
+      background: `url(${listPoint}) center center/cover no-repeat`,
     },
   },
   product__btn: {
     margin: '0 auto',
     marginTop: '60px',
+    width: '406px',
+    height: '64px',
+    fontSize: '18px',
+    fontWeight: '600',
+    color: '#ffffff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    lineHeight: '24px',
   },
 };
-
-// const StyledProductSection = styled.section`
-//   .product {
-//     padding-top: 112px;
-//     padding-bottom: 113px;
-//     background-color: var(--lightest-grey-color);
-//   }
-
-//   .product__sign {
-//     margin: 0 auto;
-//   }
-
-//   .product__title {
-//     margin-top: 24px;
-//     font-size: 48px;
-//     font-weight: 500;
-//     line-height: 56px;
-//     text-align: center;
-//   }
-
-//   .product__list_wrapper {
-//     margin-top: 40px;
-//     display: flex;
-//     justify-content: space-between;
-//   }
-
-//   .product__listItem {
-//     margin-top: 16px;
-//     display: flex;
-//     column-gap: 24px;
-//     font-size: 18px;
-//     font-weight: 400;
-//     line-height: 24px;
-//   }
-
-//   .product__listItem:first-child {
-//     margin-top: 0;
-//   }
-
-//   .product__listItem::before {
-//     content: '';
-//     display: block;
-//     margin-top: 8px;
-//     width: 8px;
-//     height: 9px;
-//     background: url(${listPoint}) center center/cover no-repeat;
-//   }
-
-//   .product__btn {
-//     margin: 0 auto;
-//     margin-top: 60px;
-//   }
-// `;
 
 class ProductSection extends React.Component {
   constructor(props) {
@@ -160,17 +114,7 @@ class ProductSection extends React.Component {
             </ul>
           </div>
 
-          <CustomButton
-            fixedSize="true"
-            primary="true"
-            width="406px"
-            height="64px"
-            fontSize="18px"
-            fontWeight="600"
-            className={classes.product__btn}
-          >
-            I Want It!
-          </CustomButton>
+          <button className={classes.product__btn}>I Want It!</button>
         </CustomContainer>
       </section>
     );

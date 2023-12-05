@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { withStyles } from '@material-ui/styles';
 import CustomContainer from './CustomContainer';
 import SpriteIcon from '../ui/SpriteIcon';
@@ -51,59 +50,6 @@ const styles = {
     textAlign: 'center',
   },
 };
-
-// const StyledBenefitsSection = styled.section`
-//   padding-top: 112px;
-//   background-color: var(--lightest-grey-color);
-
-//   .benefits {
-//     padding: 88px 109px;
-//     width: 100%;
-//     min-height: 516px;
-//     border-radius: 24px;
-//     background: #fff;
-//     filter: drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2));
-//   }
-
-//   .benefits__title {
-//     font-size: 40px;
-//     font-weight: 500;
-//     line-height: 48px;
-//     text-align: center;
-//   }
-
-//   .benefits__descr {
-//     margin-top: 16px;
-//     font-size: 24px;
-//     font-weight: 300;
-//     line-height: 32px;
-//     text-align: center;
-//   }
-
-//   .benefits__list {
-//     margin-top: 44px;
-//     display: flex;
-//     justify-content: space-between;
-//   }
-
-//   .benefits__listItem {
-//     width: 189px;
-//   }
-
-//   .benefits__listItem__img {
-//     display: block;
-//     margin: 0 auto;
-//     width: 140px;
-//     height: 112px;
-//   }
-
-//   .benefits__listItem__text {
-//     font-size: 18px;
-//     font-weight: 400;
-//     line-height: 24px;
-//     text-align: center;
-//   }
-// `;
 
 class BenefitsSection extends React.Component {
   constructor(props) {

@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-import CustomButton from '../ui/CustomButton';
 import { withStyles } from '@material-ui/styles';
 
 const styles = {
@@ -35,6 +33,28 @@ const styles = {
     display: 'block',
     margin: '0 auto',
     marginTop: '10px',
+    width: '215px',
+    height: '64px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: 'none',
+    textAlign: 'center',
+    borderRadius: '9999px',
+    fontSize: '32px',
+    lineHeight: '40px',
+  },
+  sidebar__login__loginBtn: {
+    fontWeight: 500,
+    background: 'transparent',
+  },
+  sidebar__login__signupBtn: {
+    background: 'var(--main-color)',
+    color: '#ffffff',
+    fontWeight: 600,
+    '&:hover': {
+      background: 'var(--hover-color)',
+    },
   },
 };
 
@@ -114,7 +134,7 @@ class Sidebar extends React.Component {
           </nav>
 
           <div className={classes.sidebar__login}>
-            <CustomButton
+            <button
               fontSize="32px"
               padding="12px 56px"
               color="black"
@@ -122,9 +142,9 @@ class Sidebar extends React.Component {
               className={`${classes.sidebar__login__btn} ${classes.sidebar__login__loginBtn}`}
             >
               Log in
-            </CustomButton>
+            </button>
 
-            <CustomButton
+            <button
               fontSize="32px"
               padding="12px 56px"
               primary="true"
@@ -132,7 +152,7 @@ class Sidebar extends React.Component {
               className={`${classes.sidebar__login__btn} ${classes.sidebar__login__signupBtn}`}
             >
               Sign up
-            </CustomButton>
+            </button>
           </div>
         </header>
       </>

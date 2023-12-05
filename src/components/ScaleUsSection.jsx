@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import scaleImg from './../assets/img/scale-us.png';
 import listPoint from './../assets/img/icons/list-point.svg';
 import CustomContainer from './CustomContainer';
-import CustomButton from '../ui/CustomButton';
 import CustomSign from '../ui/CustomSign';
 import { withStyles } from '@material-ui/styles';
 
@@ -18,6 +17,9 @@ const styles = {
   },
   scale__textWrapper: {
     maxWidth: '625px',
+  },
+  scale__sign: {
+    width: '90px',
   },
   scale__title: {
     marginTop: '24px',
@@ -44,7 +46,7 @@ const styles = {
       marginTop: '8px',
       width: '8px',
       height: '9px',
-      background: 'url(${listPoint}) center center/cover no-repeat',
+      background: `url(${listPoint}) center center/cover no-repeat`,
     },
   },
   scale__buttons: {
@@ -52,62 +54,35 @@ const styles = {
     display: 'flex',
     columnGap: '16px',
   },
+  scale__button: {
+    height: '72px',
+    width: '166px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '9999px',
+    fontWeight: '500',
+    fontSize: '24px',
+    lineHeight: '32px',
+    '& focus': {
+      outline: 'none',
+    },
+  },
+  scale__button1: {
+    border: 'none',
+    background: 'var(--main-color)',
+    '& :hover': {
+      background: 'var(--hover-color)',
+    },
+  },
+  scale__button1: {
+    background: 'transparent',
+    border: '1px solid var(--main-color)',
+    '& :hover': {
+      border: '1px solid var(--hover-color)',
+    },
+  },
 };
-
-// const StyledScaleUsSection = styled.section`
-//   .scale {
-//     background-color: var(--lightest-grey-color);
-//     padding-top: 170px;
-//   }
-
-//   .scaleWrapper {
-//     display: flex;
-//     justify-content: space-between;
-//   }
-
-//   .scale__textWrapper {
-//     max-width: 625px;
-//   }
-
-//   .scale__title {
-//     margin-top: 24px;
-//     font-size: 48px;
-//     font-weight: 500;
-//     line-height: 56px;
-//   }
-
-//   .scale__list {
-//     margin-top: 40px;
-//   }
-
-//   .scale__listItem {
-//     margin-top: 16px;
-//     display: flex;
-//     column-gap: 24px;
-//     font-size: 18px;
-//     line-height: 24px;
-//     font-weight: 400;
-//   }
-
-//   .scale__listItem:first-child {
-//     margin-top: 0;
-//   }
-
-//   .scale__listItem::before {
-//     content: '';
-//     display: block;
-//     margin-top: 8px;
-//     width: 8px;
-//     height: 9px;
-//     background: url(${listPoint}) center center/cover no-repeat;
-//   }
-
-//   .scale__buttons {
-//     margin-top: 40px;
-//     display: flex;
-//     column-gap: 16px;
-//   }
-// `;
 
 class ScaleUsSection extends React.Component {
   constructor(props) {
@@ -123,9 +98,7 @@ class ScaleUsSection extends React.Component {
           <div className={classes.scaleWrapper}>
             <img src={scaleImg} alt="scale" className="scale__img" />
             <div className={classes.scale__textWrapper}>
-              <CustomSign className={classes.scale__sign} width="90px">
-                SOLUTION
-              </CustomSign>
+              <CustomSign className={classes.scale__sign}>SOLUTION</CustomSign>
 
               <h2 className={classes.scale__title}>
                 Scale as much as you want without limits
@@ -151,26 +124,26 @@ class ScaleUsSection extends React.Component {
               </ul>
 
               <div className={classes.scale__buttons}>
-                <CustomButton
+                <button
                   primary="true"
                   fixedSize
                   width="166px"
                   height="64px"
                   fontSize="18px"
-                  className={classes.scale__button}
+                  className={`${classes.scale__button} ${classes.scale__button1}`}
                 >
                   Try now
-                </CustomButton>
-                <CustomButton
+                </button>
+                <button
                   outlined="true"
                   fixedSize
                   width="166px"
                   height="64px"
                   fontSize="18px"
-                  className={classes.scale__button}
+                  className={`${classes.scale__button} ${classes.scale__button1}`}
                 >
                   Book a demo
-                </CustomButton>
+                </button>
               </div>
             </div>
           </div>

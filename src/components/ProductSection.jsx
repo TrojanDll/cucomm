@@ -68,6 +68,14 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     lineHeight: '24px',
+    background: 'var(--main-color)',
+    borderRadius: '9999px',
+    '&:focus': {
+      outline: 'none',
+    },
+    '&:hover': {
+      background: 'var(--hover-color)',
+    },
   },
 };
 

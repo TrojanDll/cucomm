@@ -74,22 +74,26 @@ const styles = {
     fontWeight: '500',
     fontSize: '24px',
     lineHeight: '32px',
-    '& focus': {
+    fontSize: '18px',
+    '&:focus': {
       outline: 'none',
     },
   },
   scale__button1: {
     border: 'none',
     background: 'var(--main-color)',
-    '& :hover': {
+    color: '#ffffff',
+    '&:hover': {
       background: 'var(--hover-color)',
     },
   },
-  scale__button1: {
+  scale__button2: {
     background: 'transparent',
+    color: 'var(--main-color)',
     border: '1px solid var(--main-color)',
-    '& :hover': {
+    '&:hover': {
       border: '1px solid var(--hover-color)',
+      color: 'var(--hover-color)',
     },
   },
 };
@@ -137,22 +141,12 @@ class ScaleUsSection extends React.Component {
 
               <div className={classes.scale__buttons}>
                 <button
-                  primary="true"
-                  fixedSize
-                  width="166px"
-                  height="64px"
-                  fontSize="18px"
                   className={`${classes.scale__button} ${classes.scale__button1}`}
                 >
                   Try now
                 </button>
                 <button
-                  outlined="true"
-                  fixedSize
-                  width="166px"
-                  height="64px"
-                  fontSize="18px"
-                  className={`${classes.scale__button} ${classes.scale__button1}`}
+                  className={`${classes.scale__button} ${classes.scale__button2}`}
                 >
                   Book a demo
                 </button>

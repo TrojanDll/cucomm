@@ -51,7 +51,7 @@ const styles = {
     border: 'none',
     background: 'var(--main-color)',
     color: '#ffffff',
-    '& :hover': {
+    '&:hover': {
       background: 'var(--hover-color)',
     },
   },
@@ -60,8 +60,9 @@ const styles = {
     border: '1px solid var(--main-color)',
     color: 'var(--main-color)',
 
-    '& :hover': {
+    '&:hover': {
       border: '1px solid var(--hover-color)',
+      color: 'var(--hover-color)',
     },
   },
   promo__imgs: {

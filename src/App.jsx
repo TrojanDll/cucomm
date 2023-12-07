@@ -9,6 +9,7 @@ import KillerFeatureSection from './components/KillerFeatureSection';
 import AgenciesSection from './components/AgenciesSection';
 import VideoBenefitsSection from './components/VideoBenefitsSection';
 import CalculatorSection from './components/CalculatorSection';
+import ReviewsSection from './components/ReviewsSection';
 
 function App() {
   const [isPromoFilter, setIsPromoFilte] = useState(true);
@@ -29,6 +30,7 @@ function App() {
         <AgenciesSection />
         <VideoBenefitsSection />
         <CalculatorSection />
+        <ReviewsSection />
       </main>
     </>
   );

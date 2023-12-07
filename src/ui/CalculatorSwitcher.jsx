@@ -54,15 +54,13 @@ class CalculatorSwitcher extends React.Component {
           <div
             className={`${classes.switcher__element} ${
               switcherFirstPosition ? classes.switcher__element_active : ''
-            }`}
-          >
+            }`}>
             For yourself
           </div>
           <div
             className={`${classes.switcher__element} ${
               switcherFirstPosition ? '' : classes.switcher__element_active
-            }`}
-          >
+            }`}>
             For clients
           </div>
         </div>

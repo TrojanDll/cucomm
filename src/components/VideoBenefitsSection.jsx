@@ -1,8 +1,8 @@
 import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
 import CustomContainer from './CustomContainer';
-import listPoint from './../assets/img/icons/list-point.svg';
-import longArrow from './../assets/img/icons/long-arrow.svg';
+import listPoint from './../assets/img/listPoint.svg';
+import longArrow from './../assets/img/longArrow.svg';
 import videoThumbnail from './../assets/img/video-thumbnail.png';
 import firstImg from './../assets/img/promo-img-1.png';
 
@@ -58,7 +58,7 @@ const styles = {
       marginTop: '8px',
       width: '8px',
       height: '9px',
-      background: `url(${listPoint}) center center/cover no-repeat`,
+      background: `url("${listPoint}") center center/cover no-repeat`,
       flexShrink: 0,
     },
   },
@@ -102,7 +102,7 @@ const styles = {
       right: '-32px',
       top: '-18px',
       transform: 'translateX(100%)',
-      background: `url(${longArrow}) center center/cover no-repeat`,
+      background: `url("${longArrow}") center center/cover no-repeat`,
       zIndex: 5,
     },
   },
@@ -147,48 +147,35 @@ class VideoBenefitsSection extends Component {
             <div className={classes.benefits__textWrapper}>
               <div className={classes.benefits__sign}>BENEFITS</div>
 
-              <h2 className={classes.benefits__title}>
-                Benefits lorem ipsum dolor set amet
-              </h2>
+              <h2 className={classes.benefits__title}>Benefits lorem ipsum dolor set amet</h2>
 
               <ul className={classes.benefits__list}>
                 <li className={classes.benefits__listItem}>
-                  Automated everything: parsing, friend requesting, messaging,
-                  linking, statistics calculating
+                  Automated everything: parsing, friend requesting, messaging, linking, statistics
+                  calculating
                 </li>
-                <li className={classes.benefits__listItem}>
-                  Export/import leads
-                </li>
+                <li className={classes.benefits__listItem}>Export/import leads</li>
                 <li className={classes.benefits__listItem}>
                   Up-to-date (core udpates automatically)
                 </li>
                 <li className={classes.benefits__listItem}>
-                  No duplicates. Optional. Does not send messages to the same
-                  prospects multiple times, even outreaching from multiple
-                  accounts (use the same profiles collection)
+                  No duplicates. Optional. Does not send messages to the same prospects multiple
+                  times, even outreaching from multiple accounts (use the same profiles collection)
                 </li>
                 <li className={classes.benefits__listItem}>
-                  Team. All colleagues share the same profile collections. Reach
-                  prospects without duplicates
+                  Team. All colleagues share the same profile collections. Reach prospects without
+                  duplicates
                 </li>
               </ul>
 
               <div className={classes.benefits__btnWrapper}>
-                <button className={classes.benefits__btn}>
-                  Shut up and take my money!
-                </button>
-                <div className={classes.benefits__videoClue}>
-                  Look how it works
-                </div>
+                <button className={classes.benefits__btn}>Shut up and take my money!</button>
+                <div className={classes.benefits__videoClue}>Look how it works</div>
               </div>
             </div>
 
             <div className={classes.benefits__imgWrapper}>
-              <img
-                src={firstImg}
-                alt="benefits-img"
-                className={classes.benefits__img}
-              />
+              <img src={firstImg} alt="benefits-img" className={classes.benefits__img} />
 
               <img
                 src={videoThumbnail}

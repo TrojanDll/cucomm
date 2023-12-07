@@ -93,6 +93,13 @@ const styles = {
     display: 'inline-flex',
     marginTop: '20px',
   },
+  calculator__forYourself__profit__switcherText: {
+    marginTop: '20px',
+    marginBottom: '8px',
+    fontSize: '14px',
+    fontWeight: 400,
+    lineHeight: '20px',
+  },
 };
 
 class CalculatorSection extends Component {
@@ -100,16 +107,21 @@ class CalculatorSection extends Component {
     super(props);
     this.state = {
       resultsOpened: false,
+      isFirstPage: true,
     };
   }
 
   render() {
     const { classes } = this.props;
-    const { resultsOpened } = this.state;
+    const { resultsOpened, isFirstPage } = this.state;
 
     const toggleResultsVisibility = (e) => {
       e.preventDefault();
-      this.setState({ resultsOpened: !resultsOpened });
+      this.setState({ resultsOpened: true });
+    };
+
+    const toggleIsFirstPage = () => {
+      this.setState({ isFirstPage: !isFirstPage });
     };
 
     return (
@@ -118,11 +130,18 @@ class CalculatorSection extends Component {
           <div className={classes.calculatorWrapper}>
             <h2 className={classes.calculator__title}>Calculate Booked Appointments and Profit</h2>
             <div className={classes.calculator__switcher}>
-              <CalculatorSwitcher />
+              <CalculatorSwitcher
+                toggleIsFirstPage={toggleIsFirstPage}
+                firstParameter="For yourself"
+                secondParameter="For clients"
+                isSmall={false}
+              />
             </div>
 
-            <form className={classes.calculator__contentWrapper}>
-              <div name="calculator-for-yourself" className={classes.calculator__forYourself}>
+            <form name="calculator-for-yourself" className={classes.calculator__contentWrapper}>
+              <div
+                className={classes.calculator__forYourself}
+                style={isFirstPage ? { display: 'block' } : { display: 'none' }}>
                 <div className={classes.calculator__forYourself__booked}>
                   <h4 className={classes.calculator__forYourself__booked__title}>
                     Booked Appointments
@@ -191,9 +210,92 @@ class CalculatorSection extends Component {
                   </button>
                 </div>
               </div>
+
+              <div
+                className={`${classes.calculator__forClients} ${classes.calculator__forYourself}`}
+                style={isFirstPage ? { display: 'none' } : { display: 'block' }}>
+                <div className={classes.calculator__forYourself__booked}>
+                  <h4 className={classes.calculator__forYourself__booked__title}>
+                    Booked Appointments
+                  </h4>
+
+                  <div className={classes.calculator__forYourself__booked__inputs}>
+                    <div className={classes.calculator__forYourself__booked__input}>
+                      <CustomInput title="Accounts in use" />
+                    </div>
+
+                    <div className={classes.calculator__forYourself__booked__input}>
+                      <CustomInput
+                        placeholder="%"
+                        title="Conversion to accepted friend request (FR)"
+                      />
+                    </div>
+
+                    <div className={classes.calculator__forYourself__booked__input}>
+                      <CustomInput
+                        placeholder="%"
+                        title="Conversion from accepted FR to booked call"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    className={classes.calculator__forYourself__button}
+                    onClick={(e) => toggleResultsVisibility(e)}>
+                    Calculate
+                  </button>
+                </div>
+
+                <div className={classes.calculator__forYourself__profit}>
+                  <h4 className={classes.calculator__forYourself__profit__title}>Profit</h4>
+
+                  <div className={classes.calculator__forYourself__profit__inputsWrapper}>
+                    <div className={classes.calculator__forYourself__profit__inputs}>
+                      <div className={classes.calculator__forYourself__profit__switcher}>
+                        <div className={classes.calculator__forYourself__profit__switcherText}>
+                          Type of payment
+                        </div>
+                        <CalculatorSwitcher
+                          firstParameter="Monthly Fix"
+                          secondParameter="Per Appointment"
+                          isSmall={true}
+                        />
+                      </div>
+                      <div className={classes.calculator__forYourself__profit__input}>
+                        <CustomInput withDollar title="Average earnings from 1 client" />
+                      </div>
+                      <div className={classes.calculator__forYourself__profit__input}>
+                        <CustomInput withDollar title="Employee monthly expenses" />
+                      </div>
+                    </div>
+
+                    <div className={classes.calculator__forYourself__profit__inputs}>
+                      <div className={classes.calculator__forYourself__profit__input}>
+                        <CustomInput withDollar title="Account" />
+                      </div>
+                      <div className={classes.calculator__forYourself__profit__input}>
+                        <CustomInput withDollar title="Software" />
+                      </div>
+                      <div className={classes.calculator__forYourself__profit__input}>
+                        <CustomInput withDollar title="Proxies" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    className={classes.calculator__forYourself__button}
+                    onClick={(e) => toggleResultsVisibility(e)}>
+                    Calculate
+                  </button>
+                </div>
+              </div>
             </form>
 
-            <CalculatorResults />
+            <div
+              className={classes.calculator__results}
+              style={resultsOpened ? { display: 'block' } : { display: 'none' }}>
+              <CalculatorResults />
+            </div>
           </div>
         </CustomContainer>
       </section>

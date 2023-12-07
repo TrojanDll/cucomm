@@ -1,6 +1,6 @@
 import React from 'react';
 import scaleImg from './../assets/img/scale-us.png';
-import listPoint from './../assets/img/icons/list-point.svg';
+import listPoint from './../assets/img/listPoint.svg';
 import CustomContainer from './CustomContainer';
 import { withStyles } from '@material-ui/styles';
 
@@ -56,7 +56,7 @@ const styles = {
       marginTop: '8px',
       width: '8px',
       height: '9px',
-      background: `url(${listPoint}) center center/cover no-repeat`,
+      background: `url("${listPoint}") center center/cover no-repeat`,
     },
   },
   scale__buttons: {
@@ -112,42 +112,28 @@ class ScaleUsSection extends React.Component {
           <div className={classes.scaleWrapper}>
             <img src={scaleImg} alt="scale" className="scale__img" />
             <div className={classes.scale__textWrapper}>
-              <div className={`${classes.scale__sign} ${classes.sign}`}>
-                SOLUTION
-              </div>
+              <div className={`${classes.scale__sign} ${classes.sign}`}>SOLUTION</div>
 
-              <h2 className={classes.scale__title}>
-                Scale as much as you want without limits
-              </h2>
+              <h2 className={classes.scale__title}>Scale as much as you want without limits</h2>
 
               <ul className={classes.scale__list}>
                 <li className={classes.scale__listItem}>Automated parsing</li>
                 <li className={classes.scale__listItem}>Targeting</li>
-                <li className={classes.scale__listItem}>
-                  Automated cold outreach with follow-ups
-                </li>
-                <li className={classes.scale__listItem}>
-                  Split-test messages / Facebook accounts
-                </li>
+                <li className={classes.scale__listItem}>Automated cold outreach with follow-ups</li>
+                <li className={classes.scale__listItem}>Split-test messages / Facebook accounts</li>
                 <li className={classes.scale__listItem}>CRM</li>
                 <li className={classes.scale__listItem}>Detailed statistics</li>
                 <li className={classes.scale__listItem}>
                   Multi-account anti-detect browser in place
                 </li>
-                <li className={classes.scale__listItem}>
-                  Simple straightforward interface
-                </li>
+                <li className={classes.scale__listItem}>Simple straightforward interface</li>
               </ul>
 
               <div className={classes.scale__buttons}>
-                <button
-                  className={`${classes.scale__button} ${classes.scale__button1}`}
-                >
+                <button className={`${classes.scale__button} ${classes.scale__button1}`}>
                   Try now
                 </button>
-                <button
-                  className={`${classes.scale__button} ${classes.scale__button2}`}
-                >
+                <button className={`${classes.scale__button} ${classes.scale__button2}`}>
                   Book a demo
                 </button>
               </div>

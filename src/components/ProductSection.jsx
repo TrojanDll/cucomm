@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomContainer from './CustomContainer';
-import listPoint from './../assets/img/icons/list-point.svg';
+import listPoint from './../assets/img/listPoint.svg';
 import { withStyles } from '@material-ui/styles';
 
 const styles = {
@@ -53,7 +53,7 @@ const styles = {
       marginTop: '8px',
       width: '8px',
       height: '9px',
-      background: `url(${listPoint}) center center/cover no-repeat`,
+      background: `url("${listPoint}") center center/cover no-repeat`,
     },
   },
   product__btn: {
@@ -99,19 +99,12 @@ class ProductSection extends React.Component {
               <li className={classes.product__listItem}>
                 Scaling: Need more leads? Just add FB accounts!
               </li>
+              <li className={classes.product__listItem}>Trusted accounts in place</li>
               <li className={classes.product__listItem}>
-                Trusted accounts in place
+                No need to split profiles for each account — use the same collection
               </li>
-              <li className={classes.product__listItem}>
-                No need to split profiles for each account — use the same
-                collection
-              </li>
-              <li className={classes.product__listItem}>
-                Split-test outbound messages
-              </li>
-              <li className={classes.product__listItem}>
-                Split-test appearance of accounts
-              </li>
+              <li className={classes.product__listItem}>Split-test outbound messages</li>
+              <li className={classes.product__listItem}>Split-test appearance of accounts</li>
               <li className={classes.product__listItem}>CRM in place</li>
             </ul>
 
@@ -121,8 +114,7 @@ class ProductSection extends React.Component {
                 Free safe built-in anti-detect multi-account browser
               </li>
               <li className={classes.product__listItem}>
-                Detailed statistics for each day/account (sent, delivered,
-                booked)
+                Detailed statistics for each day/account (sent, delivered, booked)
               </li>
               <li className={classes.product__listItem}>Core auto-updates</li>
               <li className={classes.product__listItem}>On-boarding session</li>

@@ -10,6 +10,7 @@ import AgenciesSection from './components/AgenciesSection';
 import VideoBenefitsSection from './components/VideoBenefitsSection';
 import CalculatorSection from './components/CalculatorSection';
 import ReviewsSection from './components/ReviewsSection';
+import FunctionalSection from './components/FunctionalSection';
 
 function App() {
   const [isPromoFilter, setIsPromoFilte] = useState(true);
@@ -31,6 +32,7 @@ function App() {
         <VideoBenefitsSection />
         <CalculatorSection />
         <ReviewsSection />
+        <FunctionalSection />
       </main>
     </>
   );

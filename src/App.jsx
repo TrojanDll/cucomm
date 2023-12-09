@@ -31,8 +31,8 @@ function App() {
         <PromoSection isPromoFilter={isPromoFilter} />
         <ScaleUsSection />
         <BenefitsSection />
-        {/* <ProductSection />
-        <KillerFeatureSection />
+        <ProductSection />
+        {/* <KillerFeatureSection />
         <AgenciesSection />
         <VideoBenefitsSection />
         <CalculatorSection />

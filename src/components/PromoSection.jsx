@@ -4,6 +4,56 @@ import promoImg2 from './../assets/img/promo-img-2.png';
 import CustomContainer from './CustomContainer';
 import { withStyles } from '@material-ui/styles';
 
+class PromoSection extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { isPromoFilter } = this.props;
+    const { classes } = this.props;
+
+    return (
+      <CustomContainer>
+        <section className={classes.promo}>
+          <div className={classes.promo__titleWrapper}>
+            <h1 className={classes.promo__title}>Uncover tons of leads on scale</h1>
+            <div className={classes.promo__descr}>
+              Leverage a <span>huge 3.8 billion leads database</span> by sending hundreds of
+              messages on Facebook every day completely on autopilot
+            </div>
+
+            <div className={classes.promo__buttons}>
+              <button className={`${classes.promo__button} ${classes.promo__button1}`}>
+                Try now
+              </button>
+
+              <button className={`${classes.promo__button} ${classes.promo__button2}`}>
+                Book a demo
+              </button>
+            </div>
+          </div>
+
+          <div className={classes.promo__imgs}>
+            <img
+              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
+              className={`${classes.promo__img} ${classes.promo__img_1}`}
+              src={promoImg1}
+              alt="promo-image"
+            />
+            <img
+              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
+              className={`${classes.promo__img} ${classes.promo__img_2}`}
+              src={promoImg2}
+              alt="promo-image"
+            />
+          </div>
+        </section>
+      </CustomContainer>
+    );
+  }
+}
+
 const styles = {
   promo: {
     paddingBottom: '128px',
@@ -209,61 +259,5 @@ const styles = {
     },
   },
 };
-
-class PromoSection extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { isPromoFilter } = this.props;
-    const { classes } = this.props;
-
-    return (
-      <CustomContainer>
-        <section className={classes.promo}>
-          <div className={classes.promo__titleWrapper}>
-            <h1 className={classes.promo__title}>
-              Uncover tons of leads on scale
-            </h1>
-            <div className={classes.promo__descr}>
-              Leverage a <span>huge 3.8 billion leads database</span> by sending
-              hundreds of messages on Facebook every day completely on autopilot
-            </div>
-
-            <div className={classes.promo__buttons}>
-              <button
-                className={`${classes.promo__button} ${classes.promo__button1}`}
-              >
-                Try now
-              </button>
-
-              <button
-                className={`${classes.promo__button} ${classes.promo__button2}`}
-              >
-                Book a demo
-              </button>
-            </div>
-          </div>
-
-          <div className={classes.promo__imgs}>
-            <img
-              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
-              className={`${classes.promo__img} ${classes.promo__img_1}`}
-              src={promoImg1}
-              alt="promo-image"
-            />
-            <img
-              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
-              className={`${classes.promo__img} ${classes.promo__img_2}`}
-              src={promoImg2}
-              alt="promo-image"
-            />
-          </div>
-        </section>
-      </CustomContainer>
-    );
-  }
-}
 
 export default withStyles(styles)(PromoSection);

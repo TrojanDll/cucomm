@@ -8,7 +8,7 @@ const styles = {
     position: 'relative',
     margin: '0 auto',
     width: '1280px',
-    '@media (max-width: 1200px)': {
+    '@media (max-width: 1320px)': {
       width: '960px',
     },
     '@media (max-width: 992px)': {

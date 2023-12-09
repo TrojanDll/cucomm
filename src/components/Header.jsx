@@ -3,6 +3,96 @@ import SpriteIcon from '../ui/SpriteIcon';
 import Sidebar from './Sidebar';
 import { withStyles } from '@material-ui/styles';
 
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sidebarOpened: false,
+    };
+  }
+
+  switchSidebar = () => {
+    const { sidebarOpened } = this.state;
+    this.setState({ sidebarOpened: !sidebarOpened });
+    this.props.toggleIsPromoFilter();
+  };
+
+  render() {
+    const { sidebarOpened } = this.state;
+    const { classes } = this.props;
+
+    return (
+      <header
+        style={sidebarOpened ? { background: '#ffffff', paddingTop: '116px' } : {}}
+        className={classes.header}>
+        <div
+          className={classes.header__wrapper}
+          style={
+            sidebarOpened
+              ? {
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  background: '#ffffff',
+                }
+              : {}
+          }>
+          <div className={classes.header__logo}>
+            <SpriteIcon id="icon-logo" className={classes.header__logo_img} />
+          </div>
+
+          <nav className={classes.header__nav}>
+            <a href="#" className={classes.header__nav_link}>
+              Download
+            </a>
+            <a href="#" className={classes.header__nav_link}>
+              Products
+            </a>
+            <a href="#" className={classes.header__nav_link}>
+              Help Desk
+            </a>
+            <a href="#" className={classes.header__nav_link}>
+              Videos
+            </a>
+            <a href="#" className={classes.header__nav_link}>
+              Blog
+            </a>
+            <a href="#" className={classes.header__nav_link}>
+              Client Area
+            </a>
+          </nav>
+
+          <div className={classes.header__login}>
+            <button className={`${classes.header__login__btn} ${classes.header__login__loginBtn}`}>
+              Log in
+            </button>
+
+            <button className={`${classes.header__login__btn} ${classes.header__login__signupBtn}`}>
+              Sign up
+            </button>
+          </div>
+
+          <div
+            className={
+              sidebarOpened
+                ? `${classes.navToggle} ${classes.navToggle_opened}`
+                : `${classes.navToggle}`
+            }
+            onClick={this.switchSidebar}>
+            <span className="barTop"></span>
+            <span className="barMid"></span>
+            <span className="barBot"></span>
+          </div>
+        </div>
+
+        <Sidebar sidebarOpened={sidebarOpened} />
+      </header>
+    );
+  }
+}
+
 const styles = {
   header: {
     backgroundColor: '#ffffff',
@@ -151,104 +241,5 @@ const styles = {
     },
   },
 };
-
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      sidebarOpened: false,
-    };
-  }
-
-  switchSidebar = () => {
-    const { sidebarOpened } = this.state;
-    this.setState({ sidebarOpened: !sidebarOpened });
-    this.props.toggleIsPromoFilter();
-  };
-
-  render() {
-    const { sidebarOpened } = this.state;
-    const { classes } = this.props;
-
-    return (
-      <header
-        style={
-          sidebarOpened ? { background: '#ffffff', paddingTop: '116px' } : {}
-        }
-        className={classes.header}
-      >
-        <div
-          className={classes.header__wrapper}
-          style={
-            sidebarOpened
-              ? {
-                  position: 'fixed',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  background: '#ffffff',
-                }
-              : {}
-          }
-        >
-          <div className={classes.header__logo}>
-            <SpriteIcon id="icon-logo" className={classes.header__logo_img} />
-          </div>
-
-          <nav className={classes.header__nav}>
-            <a href="#" className={classes.header__nav_link}>
-              Download
-            </a>
-            <a href="#" className={classes.header__nav_link}>
-              Products
-            </a>
-            <a href="#" className={classes.header__nav_link}>
-              Help Desk
-            </a>
-            <a href="#" className={classes.header__nav_link}>
-              Videos
-            </a>
-            <a href="#" className={classes.header__nav_link}>
-              Blog
-            </a>
-            <a href="#" className={classes.header__nav_link}>
-              Client Area
-            </a>
-          </nav>
-
-          <div className={classes.header__login}>
-            <button
-              className={`${classes.header__login__btn} ${classes.header__login__loginBtn}`}
-            >
-              Log in
-            </button>
-
-            <button
-              className={`${classes.header__login__btn} ${classes.header__login__signupBtn}`}
-            >
-              Sign up
-            </button>
-          </div>
-
-          <div
-            className={
-              sidebarOpened
-                ? `${classes.navToggle} ${classes.navToggle_opened}`
-                : `${classes.navToggle}`
-            }
-            onClick={this.switchSidebar}
-          >
-            <span className="barTop"></span>
-            <span className="barMid"></span>
-            <span className="barBot"></span>
-          </div>
-        </div>
-
-        <Sidebar sidebarOpened={sidebarOpened} />
-      </header>
-    );
-  }
-}
 
 export default withStyles(styles)(Header);

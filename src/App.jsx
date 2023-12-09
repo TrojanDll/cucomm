@@ -15,6 +15,7 @@ import SafeSection from './components/SafeSection';
 import CasesSection from './components/CasesSection';
 import FAQSection from './components/FAQSection';
 import AboutSection from './components/AboutSection';
+import Footer from './components/Footer';
 
 function App() {
   const [isPromoFilter, setIsPromoFilte] = useState(true);
@@ -30,7 +31,7 @@ function App() {
         <PromoSection isPromoFilter={isPromoFilter} />
         <ScaleUsSection />
         <BenefitsSection />
-        <ProductSection />
+        {/* <ProductSection />
         <KillerFeatureSection />
         <AgenciesSection />
         <VideoBenefitsSection />
@@ -41,6 +42,7 @@ function App() {
         <CasesSection />
         <FAQSection />
         <AboutSection />
+        <Footer /> */}
       </main>
     </>
   );

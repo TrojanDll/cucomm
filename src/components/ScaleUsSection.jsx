@@ -4,6 +4,53 @@ import listPoint from './../assets/img/listPoint.svg';
 import CustomContainer from './CustomContainer';
 import { withStyles } from '@material-ui/styles';
 
+class ScaleUsSection extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <section className={classes.scale}>
+        <CustomContainer>
+          <div className={classes.scaleWrapper}>
+            <img src={scaleImg} alt="scale" className="scale__img" />
+            <div className={classes.scale__textWrapper}>
+              <div className={`${classes.scale__sign} ${classes.sign}`}>SOLUTION</div>
+
+              <h2 className={classes.scale__title}>Scale as much as you want without limits</h2>
+
+              <ul className={classes.scale__list}>
+                <li className={classes.scale__listItem}>Automated parsing</li>
+                <li className={classes.scale__listItem}>Targeting</li>
+                <li className={classes.scale__listItem}>Automated cold outreach with follow-ups</li>
+                <li className={classes.scale__listItem}>Split-test messages / Facebook accounts</li>
+                <li className={classes.scale__listItem}>CRM</li>
+                <li className={classes.scale__listItem}>Detailed statistics</li>
+                <li className={classes.scale__listItem}>
+                  Multi-account anti-detect browser in place
+                </li>
+                <li className={classes.scale__listItem}>Simple straightforward interface</li>
+              </ul>
+
+              <div className={classes.scale__buttons}>
+                <button className={`${classes.scale__button} ${classes.scale__button1}`}>
+                  Try now
+                </button>
+                <button className={`${classes.scale__button} ${classes.scale__button2}`}>
+                  Book a demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </CustomContainer>
+      </section>
+    );
+  }
+}
+
 const styles = {
   scale: {
     backgroundColor: 'var(--lightest-grey-color)',
@@ -96,52 +143,48 @@ const styles = {
       color: 'var(--hover-color)',
     },
   },
+
+  '@media (max-width: 1320px)': {
+    scale: {
+      paddingTop: '72px',
+    },
+    scaleWrapper: {
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+    },
+    scale__sign: {
+      margin: '0 auto',
+      marginTop: '40px',
+    },
+    scale__title: {
+      textAlign: 'center',
+    },
+
+    scale__buttons: {
+      justifyContent: 'center',
+    },
+  },
+  '@media (max-width: 768px)': {
+    scale__title: {
+      fontSize: '44px',
+      lineHeight: '52px',
+    },
+  },
+  '@media (max-width: 576px)': {
+    scale: {
+      paddingTop: '64px',
+    },
+    scale__title: {
+      fontSize: '32px',
+      lineHeight: '40px',
+    },
+    scale__textWrapper: {
+      maxWidth: '100%',
+    },
+    scale__list: {
+      marginTop: '32px',
+    },
+  },
 };
 
-class ScaleUsSection extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <section className={classes.scale}>
-        <CustomContainer>
-          <div className={classes.scaleWrapper}>
-            <img src={scaleImg} alt="scale" className="scale__img" />
-            <div className={classes.scale__textWrapper}>
-              <div className={`${classes.scale__sign} ${classes.sign}`}>SOLUTION</div>
-
-              <h2 className={classes.scale__title}>Scale as much as you want without limits</h2>
-
-              <ul className={classes.scale__list}>
-                <li className={classes.scale__listItem}>Automated parsing</li>
-                <li className={classes.scale__listItem}>Targeting</li>
-                <li className={classes.scale__listItem}>Automated cold outreach with follow-ups</li>
-                <li className={classes.scale__listItem}>Split-test messages / Facebook accounts</li>
-                <li className={classes.scale__listItem}>CRM</li>
-                <li className={classes.scale__listItem}>Detailed statistics</li>
-                <li className={classes.scale__listItem}>
-                  Multi-account anti-detect browser in place
-                </li>
-                <li className={classes.scale__listItem}>Simple straightforward interface</li>
-              </ul>
-
-              <div className={classes.scale__buttons}>
-                <button className={`${classes.scale__button} ${classes.scale__button1}`}>
-                  Try now
-                </button>
-                <button className={`${classes.scale__button} ${classes.scale__button2}`}>
-                  Book a demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </CustomContainer>
-      </section>
-    );
-  }
-}
 export default withStyles(styles)(ScaleUsSection);

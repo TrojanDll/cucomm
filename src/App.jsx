@@ -12,6 +12,7 @@ import CalculatorSection from './components/CalculatorSection';
 import ReviewsSection from './components/ReviewsSection';
 import FunctionalSection from './components/FunctionalSection';
 import SafeSection from './components/SafeSection';
+import CasesSection from './components/CasesSection';
 
 function App() {
   const [isPromoFilter, setIsPromoFilte] = useState(true);
@@ -35,6 +36,7 @@ function App() {
         <ReviewsSection />
         <FunctionalSection />
         <SafeSection />
+        <CasesSection />
       </main>
     </>
   );

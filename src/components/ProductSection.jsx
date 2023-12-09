@@ -54,6 +54,7 @@ const styles = {
       width: '8px',
       height: '9px',
       background: `url("${listPoint}") center center/cover no-repeat`,
+      flexShrink: 0,
     },
   },
   product__btn: {

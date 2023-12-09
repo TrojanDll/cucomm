@@ -11,6 +11,7 @@ import VideoBenefitsSection from './components/VideoBenefitsSection';
 import CalculatorSection from './components/CalculatorSection';
 import ReviewsSection from './components/ReviewsSection';
 import FunctionalSection from './components/FunctionalSection';
+import SafeSection from './components/SafeSection';
 
 function App() {
   const [isPromoFilter, setIsPromoFilte] = useState(true);
@@ -33,6 +34,7 @@ function App() {
         <CalculatorSection />
         <ReviewsSection />
         <FunctionalSection />
+        <SafeSection />
       </main>
     </>
   );

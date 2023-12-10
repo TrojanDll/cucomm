@@ -34,9 +34,9 @@ function App() {
         <ProductSection />
         <KillerFeatureSection />
         <AgenciesSection />
-        {/* <VideoBenefitsSection />
+        <VideoBenefitsSection />
         <CalculatorSection />
-        <ReviewsSection />
+        {/* <ReviewsSection />
         <FunctionalSection />
         <SafeSection />
         <CasesSection />

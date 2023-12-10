@@ -6,6 +6,63 @@ import longArrow from './../assets/img/longArrow.svg';
 import videoThumbnail from './../assets/img/video-thumbnail.png';
 import firstImg from './../assets/img/promo-img-1.png';
 
+class VideoBenefitsSection extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <section className={classes.benefits}>
+        <CustomContainer>
+          <div className={classes.benefits__wrapper}>
+            <div className={classes.benefits__textWrapper}>
+              <div className={classes.benefits__sign}>BENEFITS</div>
+
+              <h2 className={classes.benefits__title}>Benefits lorem ipsum dolor set amet</h2>
+
+              <ul className={classes.benefits__list}>
+                <li className={classes.benefits__listItem}>
+                  Automated everything: parsing, friend requesting, messaging, linking, statistics
+                  calculating
+                </li>
+                <li className={classes.benefits__listItem}>Export/import leads</li>
+                <li className={classes.benefits__listItem}>
+                  Up-to-date (core udpates automatically)
+                </li>
+                <li className={classes.benefits__listItem}>
+                  No duplicates. Optional. Does not send messages to the same prospects multiple
+                  times, even outreaching from multiple accounts (use the same profiles collection)
+                </li>
+                <li className={classes.benefits__listItem}>
+                  Team. All colleagues share the same profile collections. Reach prospects without
+                  duplicates
+                </li>
+              </ul>
+
+              <div className={classes.benefits__btnWrapper}>
+                <button className={classes.benefits__btn}>Shut up and take my money!</button>
+                <div className={classes.benefits__videoClue}>Look how it works</div>
+              </div>
+            </div>
+
+            <div className={classes.benefits__imgWrapper}>
+              <img src={firstImg} alt="benefits-img" className={classes.benefits__img} />
+
+              <img
+                src={videoThumbnail}
+                alt="video-thumbnail"
+                className={classes.benefits__videoImg}
+              />
+            </div>
+          </div>
+        </CustomContainer>
+      </section>
+    );
+  }
+}
+
 const styles = {
   benefits: {
     paddingTop: '112px',
@@ -131,63 +188,81 @@ const styles = {
     right: '109px',
     zIndex: 3,
   },
+
+  '@media (max-width: 1320px)': {
+    benefits__wrapper: {
+      flexWrap: 'wrap',
+    },
+    benefits__textWrapper: {
+      width: '100%',
+    },
+    benefits__sign: {
+      margin: '0 auto',
+    },
+    benefits__title: {
+      textAlign: 'center',
+    },
+    benefits__img: {
+      display: 'none',
+    },
+    benefits__videoImg: {
+      position: 'static',
+      display: 'block',
+      height: 'auto',
+    },
+    benefits__videoClue: {
+      '&::after': {
+        display: 'none',
+      },
+    },
+    benefits__btnWrapper: {
+      justifyContent: 'center',
+    },
+    benefits__imgWrapper: {
+      margin: '0 auto',
+      marginTop: '48px',
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    benefits__title: {
+      fontSize: '44px',
+      lineHeight: '56px',
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    benefits: {
+      paddingTop: '64px',
+    },
+    benefits__title: {
+      fontSize: '32px',
+      lineHeight: '40px',
+    },
+    benefits__listItem: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    benefits__btnWrapper: {
+      flexWrap: 'wrap',
+    },
+    benefits__btn: {
+      width: '100%',
+    },
+    benefits__videoClue: {
+      marginTop: '32px',
+      textAlign: 'center',
+    },
+    benefits__imgWrapper: {
+      marginTop: '32px',
+    },
+    benefits__videoImg: {
+      width: '100%',
+    },
+  },
 };
-
-class VideoBenefitsSection extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <section className={classes.benefits}>
-        <CustomContainer>
-          <div className={classes.benefits__wrapper}>
-            <div className={classes.benefits__textWrapper}>
-              <div className={classes.benefits__sign}>BENEFITS</div>
-
-              <h2 className={classes.benefits__title}>Benefits lorem ipsum dolor set amet</h2>
-
-              <ul className={classes.benefits__list}>
-                <li className={classes.benefits__listItem}>
-                  Automated everything: parsing, friend requesting, messaging, linking, statistics
-                  calculating
-                </li>
-                <li className={classes.benefits__listItem}>Export/import leads</li>
-                <li className={classes.benefits__listItem}>
-                  Up-to-date (core udpates automatically)
-                </li>
-                <li className={classes.benefits__listItem}>
-                  No duplicates. Optional. Does not send messages to the same prospects multiple
-                  times, even outreaching from multiple accounts (use the same profiles collection)
-                </li>
-                <li className={classes.benefits__listItem}>
-                  Team. All colleagues share the same profile collections. Reach prospects without
-                  duplicates
-                </li>
-              </ul>
-
-              <div className={classes.benefits__btnWrapper}>
-                <button className={classes.benefits__btn}>Shut up and take my money!</button>
-                <div className={classes.benefits__videoClue}>Look how it works</div>
-              </div>
-            </div>
-
-            <div className={classes.benefits__imgWrapper}>
-              <img src={firstImg} alt="benefits-img" className={classes.benefits__img} />
-
-              <img
-                src={videoThumbnail}
-                alt="video-thumbnail"
-                className={classes.benefits__videoImg}
-              />
-            </div>
-          </div>
-        </CustomContainer>
-      </section>
-    );
-  }
-}
 
 export default withStyles(styles)(VideoBenefitsSection);

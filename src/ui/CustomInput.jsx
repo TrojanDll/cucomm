@@ -1,6 +1,34 @@
 import { withStyles } from '@material-ui/styles';
 import React from 'react';
 
+class CustomInput extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { classes } = this.props;
+    const { title, placeholder, withDollar } = this.props;
+
+    return (
+      <div className={classes.inputWrapper}>
+        <div className={classes.input__title}>{title}</div>
+        <div
+          className={`${classes.input__inputWrapper} ${
+            withDollar ? classes.input__input_withDollarWrapper : ''
+          }`}>
+          <input
+            className={`${classes.input__input} ${
+              withDollar ? classes.input__input_withDollar : ''
+            }`}
+            type="text"
+            placeholder={placeholder}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   inputWrapper: {
     width: '297px',
@@ -47,33 +75,15 @@ const styles = {
   input__input_withDollar: {
     padding: '12px 32px 12px 46px',
   },
+
+  '@media (max-width: 576px)': {
+    inputWrapper: {
+      width: '100%',
+    },
+    input__input: {
+      width: '100%',
+    },
+  },
 };
 
-class CustomInput extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    const { classes } = this.props;
-    const { title, placeholder, withDollar } = this.props;
-
-    return (
-      <div className={classes.inputWrapper}>
-        <div className={classes.input__title}>{title}</div>
-        <div
-          className={`${classes.input__inputWrapper} ${
-            withDollar ? classes.input__input_withDollarWrapper : ''
-          }`}>
-          <input
-            className={`${classes.input__input} ${
-              withDollar ? classes.input__input_withDollar : ''
-            }`}
-            type="text"
-            placeholder={placeholder}
-          />
-        </div>
-      </div>
-    );
-  }
-}
 export default withStyles(styles)(CustomInput);

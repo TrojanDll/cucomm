@@ -1,6 +1,62 @@
 import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
 
+class CalculatorResults extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <div className={classes.results}>
+        <h4 className={classes.results__title}>Results</h4>
+
+        <div className={classes.results__wrapper}>
+          <div className={classes.results__part}>
+            <div className={classes.results__item}>
+              <div className={classes.results__item__text}>Daily sended messages:</div>
+              <div className={classes.results__item__value}>1,000</div>
+            </div>
+
+            <div className={classes.results__item}>
+              <div className={classes.results__item__text}>Cases booked daily:</div>
+              <div className={classes.results__item__value}>2</div>
+            </div>
+
+            <div className={classes.results__item}>
+              <div className={classes.results__item__text}>Cases booked monthly:</div>
+              <div className={classes.results__item__value}>40</div>
+            </div>
+          </div>
+
+          <div className={classes.results__part}>
+            <div className={`${classes.results__item} ${classes.results__item__text_withQuestion}`}>
+              <div className={classes.results__item__text}>Profit Per Appointment:</div>
+              <div className={classes.results__item__value}>$ 100</div>
+            </div>
+
+            <div className={classes.results__item}>
+              <div className={classes.results__item__text}>Total Monthly Profit:</div>
+              <div className={classes.results__item__value}>$ 100</div>
+            </div>
+
+            <div className={classes.results__item}>
+              <div className={classes.results__item__text}>Total Monthly Expenses:</div>
+              <div className={classes.results__item__value}>$ 100</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" className={classes.results__button}>
+          Try CUCOMM
+        </a>
+      </div>
+    );
+  }
+}
+
 const styles = {
   results: {
     position: 'relative',
@@ -87,61 +143,78 @@ const styles = {
     fontSize: '24px',
     cursor: 'pointer',
   },
+
+  '@media (max-width: 1320px)': {
+    results__wrapper: {
+      flexWrap: 'wrap',
+    },
+    results__part: {
+      '&:first-child': {
+        '&::after': {
+          bottom: '-24px',
+          right: '0',
+          width: '100%',
+          height: '1px',
+        },
+      },
+      '&:last-child': {
+        marginTop: '32px',
+      },
+    },
+  },
+
+  '@media (max-width: 992px)': {
+    results__button: {
+      position: 'static',
+      marginTop: '24px',
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    results__item: {
+      flexWrap: 'wrap',
+    },
+    results__item__value: {
+      width: '100%',
+    },
+    results__item__text_withQuestion: {
+      position: 'relative',
+      '&::after': {
+        position: 'absolute',
+        right: 0,
+      },
+      results__button: {
+        height: '64px',
+      },
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    results: {
+      padding: '32px 20px',
+    },
+    results__title: {
+      fontSize: '18px',
+      fontWeight: 600,
+      lineHeight: '24px',
+    },
+    results__item__text: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    results__item__value: {
+      fontSize: '18px',
+      lineHeight: '24px',
+      fontWeight: 600,
+    },
+    results__button: {
+      width: '100%',
+      height: '64px',
+      fontSize: '18px',
+      lineHeight: '24px',
+      fontWeight: 600,
+    },
+  },
 };
 
-class CalculatorResults extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.results}>
-        <h4 className={classes.results__title}>Results</h4>
-
-        <div className={classes.results__wrapper}>
-          <div className={classes.results__part}>
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Daily sended messages:</div>
-              <div className={classes.results__item__value}>1,000</div>
-            </div>
-
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Cases booked daily:</div>
-              <div className={classes.results__item__value}>2</div>
-            </div>
-
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Cases booked monthly:</div>
-              <div className={classes.results__item__value}>40</div>
-            </div>
-          </div>
-
-          <div className={classes.results__part}>
-            <div className={`${classes.results__item} ${classes.results__item__text_withQuestion}`}>
-              <div className={classes.results__item__text}>Profit Per Appointment:</div>
-              <div className={classes.results__item__value}>$ 100</div>
-            </div>
-
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Total Monthly Profit:</div>
-              <div className={classes.results__item__value}>$ 100</div>
-            </div>
-
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Total Monthly Expenses:</div>
-              <div className={classes.results__item__value}>$ 100</div>
-            </div>
-          </div>
-        </div>
-
-        <a href="#" className={classes.results__button}>
-          Try CUCOMM
-        </a>
-      </div>
-    );
-  }
-}
 export default withStyles(styles)(CalculatorResults);

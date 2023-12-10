@@ -1,5 +1,56 @@
 import { withStyles } from '@material-ui/styles';
 import React from 'react';
+import chevron from './../assets/img/chevron.svg';
+
+class CalculatorSwitcher extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      switcherFirstPosition: true,
+    };
+  }
+  render() {
+    const { switcherFirstPosition } = this.state;
+    const { classes, isSmall, toggleIsFirstPage, firstParameter, secondParameter } = this.props;
+
+    const toggleSwitcher = (e) => {
+      e.preventDefault();
+      this.setState({
+        switcherFirstPosition: !switcherFirstPosition,
+      });
+      if (isSmall == false) {
+        toggleIsFirstPage();
+      }
+    };
+
+    return window.innerWidth >= 576 ? (
+      <button onClick={(e) => toggleSwitcher(e)}>
+        <div className={`${classes.switcher} ${isSmall ? classes.switcher_small : ''}`}>
+          <div
+            className={`${classes.switcher__element} ${
+              switcherFirstPosition ? classes.switcher__element_active : ''
+            } ${isSmall ? classes.switcher__element_small : ''}`}>
+            {firstParameter}
+          </div>
+          <div
+            className={`${classes.switcher__element} ${
+              switcherFirstPosition ? '' : classes.switcher__element_active
+            } ${isSmall ? classes.switcher__element_small : ''}`}>
+            {secondParameter}
+          </div>
+        </div>
+      </button>
+    ) : (
+      <button
+        onClick={(e) => toggleSwitcher(e)}
+        className={`${classes.mobileSwitcher} ${
+          switcherFirstPosition ? '' : classes.mobileSwitcherChanged
+        } ${isSmall ? classes.switcherSmallMobile : ''}`}>
+        {switcherFirstPosition ? firstParameter : secondParameter}
+      </button>
+    );
+  }
+}
 
 const styles = {
   switcher: {
@@ -40,47 +91,39 @@ const styles = {
     opacity: '1',
     color: '#ffffff',
   },
+  mobileSwitcher: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '16px 24px',
+    width: '100%',
+    height: '56px',
+    border: '1px solid var(--light-grey-color)',
+    borderRadius: '9999px',
+    fontSize: '18px',
+    lineHeight: '24px',
+    fontWeight: 500,
+    '&::after': {
+      content: '""',
+      display: 'block',
+      width: '16px',
+      height: '8px',
+      flexShrink: 0,
+      transform: 'rotate(0)',
+      transition: 'all 0.2s',
+      background: `url("${chevron}") center center/cover no-repeat`,
+    },
+  },
+  switcherSmallMobile: {
+    height: '48px',
+    fontSize: '14px',
+    lineHeight: '20px',
+  },
+  mobileSwitcherChanged: {
+    '&::after': {
+      transform: 'rotate(180deg)',
+    },
+  },
 };
 
-class CalculatorSwitcher extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      switcherFirstPosition: true,
-    };
-  }
-  render() {
-    const { switcherFirstPosition } = this.state;
-    const { classes, isSmall, toggleIsFirstPage } = this.props;
-
-    const toggleSwitcher = (e) => {
-      e.preventDefault();
-      this.setState({
-        switcherFirstPosition: !switcherFirstPosition,
-      });
-      if (isSmall == false) {
-        toggleIsFirstPage();
-      }
-    };
-
-    return (
-      <button onClick={(e) => toggleSwitcher(e)}>
-        <div className={`${classes.switcher} ${isSmall ? classes.switcher_small : ''}`}>
-          <div
-            className={`${classes.switcher__element} ${
-              switcherFirstPosition ? classes.switcher__element_active : ''
-            } ${isSmall ? classes.switcher__element_small : ''}`}>
-            {this.props.firstParameter}
-          </div>
-          <div
-            className={`${classes.switcher__element} ${
-              switcherFirstPosition ? '' : classes.switcher__element_active
-            } ${isSmall ? classes.switcher__element_small : ''}`}>
-            {this.props.secondParameter}
-          </div>
-        </div>
-      </button>
-    );
-  }
-}
 export default withStyles(styles)(CalculatorSwitcher);

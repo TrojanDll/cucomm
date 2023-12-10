@@ -36,11 +36,11 @@ function App() {
         <AgenciesSection />
         <VideoBenefitsSection />
         <CalculatorSection />
-        {/* <ReviewsSection />
+        <ReviewsSection />
         <FunctionalSection />
         <SafeSection />
         <CasesSection />
-        <FAQSection />
+        {/* <FAQSection />
         <AboutSection />
         <Footer /> */}
       </main>

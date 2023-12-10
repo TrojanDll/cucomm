@@ -111,6 +111,68 @@ const styles = {
       background: 'var(--hover-color)',
     },
   },
+
+  '@media (max-width: 1320px)': {
+    safeWrapper: {
+      columnGap: '72px',
+    },
+    safeMessageWrapper: {
+      '&:first-child': {
+        '&::after': {
+          right: '-36px',
+        },
+      },
+    },
+  },
+
+  '@media (max-width: 992px)': {
+    safeSection: {
+      paddingTop: '100px',
+    },
+    safeIcon: {
+      display: 'none',
+    },
+    safeWrapper: {
+      flexWrap: 'wrap',
+      rowGap: '40px',
+    },
+    safeMessageWrapper: {
+      '&:first-child': {
+        '&::after': {
+          display: 'none',
+        },
+      },
+    },
+    safeMessageDescr: {
+      marginTop: '16px',
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    safeSection: {
+      paddingTop: '150px',
+      paddingBottom: '64px',
+    },
+    safeMessageWrapper: {
+      width: '100%',
+    },
+    safeMessageImg: {
+      maxWidth: '315px',
+      height: 'auto',
+    },
+    safeMessageImgContainer: {
+      margin: '0 auto',
+      maxWidth: '315px',
+      height: 'auto',
+    },
+    safeMessageDescr: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    button: {
+      width: '100%',
+    },
+  },
 };
 
 export default withStyles(styles)(SafeSection);

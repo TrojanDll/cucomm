@@ -219,6 +219,7 @@ const styles = {
   '@media (max-width: 576px)': {
     agencies: {
       paddingTop: '110px',
+      paddingBottom: '64px',
     },
     agencies__img_1: {
       borderRadius: '8px',

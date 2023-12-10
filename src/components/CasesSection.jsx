@@ -34,26 +34,26 @@ class CasesSection extends Component {
                 </li>
                 <li className={classes.caseItemlistItem}>Average SDR salary $60,000</li>
               </ul>
+            </div>
 
-              <div className={classes.caseSubItem}>
-                <div className={classes.caseSubItemTitle}>With CUCOMM 4 times faster</div>
+            <div className={classes.caseSubItem}>
+              <div className={classes.caseSubItemTitle}>With CUCOMM 4 times faster</div>
 
-                <ul className={classes.caseItemlist}>
-                  <li className={classes.caseItemlistItem}>
-                    Time spend on Facebook communications with CUCOMM (per SDR): 30 minutes per day
-                    (1,5 hours per day in total)
-                  </li>
-                  <li className={classes.caseItemlistItem}>
-                    Saved time per agent pet year: 1,5*260=390 hours (48,75 days) per year
-                  </li>
-                  <li className={classes.caseItemlistItem}>
-                    Saved money per year per agent: 60,000/260/8*390=$11,250 saved
-                  </li>
-                  <li className={classes.caseItemlistItem}>
-                    Saved money per year in total: $11,250*3=$33,750 saved in total
-                  </li>
-                </ul>
-              </div>
+              <ul className={classes.caseItemlist}>
+                <li className={classes.caseItemlistItem}>
+                  Time spend on Facebook communications with CUCOMM (per SDR): 30 minutes per day
+                  (1,5 hours per day in total)
+                </li>
+                <li className={classes.caseItemlistItem}>
+                  Saved time per agent pet year: 1,5*260=390 hours (48,75 days) per year
+                </li>
+                <li className={classes.caseItemlistItem}>
+                  Saved money per year per agent: 60,000/260/8*390=$11,250 saved
+                </li>
+                <li className={classes.caseItemlistItem}>
+                  Saved money per year in total: $11,250*3=$33,750 saved in total
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -76,22 +76,22 @@ class CasesSection extends Component {
                   Average bill: $6,400, revenue: 2*$6,400=$12,800 per month
                 </li>
               </ul>
+            </div>
 
-              <div className={classes.caseSubItem}>
-                <div className={classes.caseSubItemTitle}>With CUCOMM revenue is higher</div>
+            <div className={classes.caseSubItem}>
+              <div className={classes.caseSubItemTitle}>With CUCOMM revenue is higher</div>
 
-                <ul className={classes.caseItemlist}>
-                  <li className={classes.caseItemlistItem}>
-                    SDR send messages per month in total: 11,340
-                  </li>
-                  <li className={classes.caseItemlistItem}>Sales per month: 4</li>
-                  <li className={classes.caseItemlistItem}>
-                    Increased revenue: 4*$6,400=$25,600 — increased by 2 times!
-                  </li>
-                </ul>
+              <ul className={classes.caseItemlist}>
+                <li className={classes.caseItemlistItem}>
+                  SDR send messages per month in total: 11,340
+                </li>
+                <li className={classes.caseItemlistItem}>Sales per month: 4</li>
+                <li className={classes.caseItemlistItem}>
+                  Increased revenue: 4*$6,400=$25,600 — increased by 2 times!
+                </li>
+              </ul>
 
-                <img className={classes.caseItemImg} src={casesImg} alt="" />
-              </div>
+              <img className={classes.caseItemImg} src={casesImg} alt="" />
             </div>
           </div>
         </CustomContainer>
@@ -187,7 +187,8 @@ const styles = {
   caseSubItem: {
     position: 'absolute',
     top: '64px',
-    left: 'calc(100% - 100px)',
+    left: '0',
+    transform: 'translateX(100%)',
     width: '645px',
     height: '448px',
     flexShrink: 0,
@@ -207,6 +208,107 @@ const styles = {
     marginTop: '64px',
     width: '290px',
     height: '280px',
+  },
+
+  '@media (max-width: 1320px)': {
+    caseItem: {
+      margin: '0 auto',
+    },
+    caseSubItem: {
+      margin: '0 auto',
+      position: 'static',
+      transform: 'translateX(0)',
+      transform: 'translateY(-40px)',
+      width: '734px',
+    },
+    caseItemImg: {
+      display: 'none',
+    },
+    caseWrapper: {
+      marginTop: '32px',
+    },
+  },
+
+  '@media (max-width: 992px)': {
+    caseSubItem: {
+      width: '100%',
+      height: 'auto',
+    },
+    caseItem: {
+      width: '100%',
+      height: 'auto',
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    title: {
+      fontSize: '44px',
+    },
+    caseItemTitle: {
+      fontSize: '44px',
+    },
+    caseItemSubTitle: {
+      fontSize: '22px',
+    },
+    caseItemDescr: {
+      fontSize: '22px',
+    },
+    caseItem: {
+      padding: '40px 56px 64px 56px',
+    },
+    caseSubItem: {
+      padding: '44px 52px',
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    casesSection: {
+      paddingTop: '64px',
+      paddingBottom: '64px',
+    },
+    caseWrapper: {
+      '&:last-child': {
+        marginTop: 0,
+      },
+    },
+    caseItem: {
+      filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.20))',
+    },
+    caseSubItem: {
+      filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.20))',
+    },
+    title: {
+      marginTop: '24px',
+      fontSize: '32px',
+      lineHeight: '40px',
+    },
+    caseItemTitle: {
+      fontSize: '32px',
+      lineHeight: '40px',
+    },
+    caseItemSubTitle: {
+      marginTop: '16px',
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    caseItemDescr: {
+      marginTop: '16px',
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    caseItem: {
+      padding: '40px 30px 56px 30px',
+    },
+    caseSubItem: {
+      padding: '40px 30px',
+    },
+    caseSubItemTitle: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    caseItemSign: {
+      marginTop: '16px',
+    },
   },
 };
 

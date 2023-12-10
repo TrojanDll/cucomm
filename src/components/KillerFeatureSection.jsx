@@ -107,6 +107,10 @@ const styles = {
   },
 
   '@media (max-width: 576px)': {
+    feature: {
+      paddingBottom: '120px',
+      paddingTop: '64px',
+    },
     feature__title: {
       fontSize: '32px',
       lineHeight: '40px',

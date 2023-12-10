@@ -32,9 +32,9 @@ function App() {
         <ScaleUsSection />
         <BenefitsSection />
         <ProductSection />
-        {/* <KillerFeatureSection />
+        <KillerFeatureSection />
         <AgenciesSection />
-        <VideoBenefitsSection />
+        {/* <VideoBenefitsSection />
         <CalculatorSection />
         <ReviewsSection />
         <FunctionalSection />

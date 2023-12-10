@@ -7,6 +7,69 @@ import agenciesImg2 from './../assets/img/agencies-img-2.png';
 import agenciesImgMan from './../assets/img/agencies-man-img.jpg';
 import SpriteIcon from '../ui/SpriteIcon';
 
+class AgenciesSection extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <section className={classes.agencies}>
+        <CustomContainer>
+          <img
+            src={agenciesImg1}
+            alt="agenciesImg1"
+            className={`${classes.agencies__img} ${classes.agencies__img_1}`}
+          />
+          <img
+            src={agenciesImg2}
+            alt="agenciesImg2"
+            className={`${classes.agencies__img} ${classes.agencies__img_2}`}
+          />
+          <img src={agenciesImgMan} alt="agenciesImg2" className={classes.agencies__img_man} />
+
+          <h2 className={classes.agencies__title}>
+            Built with <img src={heartImg} alt="heart" /> for Marketing Agencies
+          </h2>
+          <div className={classes.agencies__descr}>And anyone looking for high-ticket clients</div>
+
+          <div className={classes.agencies__list}>
+            <div className={classes.agencies__list_item}>
+              <SpriteIcon id="icon-targeting-1" className={classes.agencies__list_item__img} />
+              <div className={classes.agencies__list_item__descr}>
+                Target by demographics <br /> and location
+              </div>
+            </div>
+
+            <div className={classes.agencies__list_item}>
+              <SpriteIcon id="icon-targeting-2" className={classes.agencies__list_item__img} />
+              <div className={classes.agencies__list_item__descr}>
+                Target by Job-title (+negative keywords)
+              </div>
+            </div>
+
+            <div className={classes.agencies__list_item}>
+              <SpriteIcon id="icon-targeting-3" className={classes.agencies__list_item__img} />
+              <div className={classes.agencies__list_item__descr}>
+                Target by Industry and Interest
+              </div>
+            </div>
+
+            <div className={classes.agencies__list_item}>
+              <SpriteIcon id="icon-targeting-4" className={classes.agencies__list_item__img} />
+              <div className={classes.agencies__list_item__descr}>
+                And more! <br /> Lorem ipsum dolor set
+              </div>
+            </div>
+          </div>
+        </CustomContainer>
+      </section>
+    );
+  }
+}
+
 const styles = {
   agencies: {
     paddingTop: '550px',
@@ -64,7 +127,7 @@ const styles = {
     position: 'relative',
     width: '298px',
     '&::after': {
-      content: '""', // Добавлен контент
+      content: '""',
       position: 'absolute',
       right: 0,
       bottom: 0,
@@ -87,87 +150,100 @@ const styles = {
     fontWeight: 300,
     lineHeight: '32px',
   },
+
+  '@media (max-width: 1320px)': {
+    agencies__img_1: {
+      width: '675px',
+      height: '348px',
+      borderRadius: '16px',
+    },
+    agencies__img_2: {
+      width: '500px',
+      height: '280px',
+      borderRadius: '16px',
+    },
+    agencies__list: {
+      flexWrap: 'wrap',
+      rowGap: '48px',
+    },
+    agencies__list_item: {
+      width: 'calc(50% - 32px)',
+      '&:nth-child(even)::after': {
+        display: 'none',
+      },
+      '&::after': {
+        right: '-32px',
+      },
+    },
+    agencies__list_item__img: {
+      display: 'block',
+      margin: '0 auto',
+    },
+    agencies__list_item__descr: {
+      textAlign: 'center',
+    },
+  },
+
+  '@media (max-width: 992px)': {
+    agencies: {
+      paddingTop: '380px',
+    },
+    agencies__img_2: {
+      display: 'none',
+    },
+    agencies__img_1: {
+      top: '-470px',
+      width: '100%',
+      height: 'auto',
+    },
+    agencies__img_man: {
+      display: 'none',
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    agencies: {
+      paddingTop: '250px',
+    },
+    agencies__img_1: {
+      top: '-350px',
+    },
+    agencies__list_item: {
+      width: 'calc(50% - 20px)',
+      '&::after': {
+        display: 'none',
+      },
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    agencies: {
+      paddingTop: '110px',
+    },
+    agencies__img_1: {
+      borderRadius: '8px',
+      width: '315px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      top: '-200px',
+      filter: 'drop-shadow(0px 7.477px 22.431px rgba(0, 48, 71, 0.20))',
+    },
+    agencies__title: {
+      fontSize: '32px',
+      lineHeight: '40px',
+    },
+    agencies__descr: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    agencies__list_item: {
+      width: '100%',
+    },
+    agencies__list_item__descr: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+  },
 };
-
-class AgenciesSection extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <section className={classes.agencies}>
-        <CustomContainer>
-          <img
-            src={agenciesImg1}
-            alt="agenciesImg1"
-            className={`${classes.agencies__img} ${classes.agencies__img_1}`}
-          />
-          <img
-            src={agenciesImg2}
-            alt="agenciesImg2"
-            className={`${classes.agencies__img} ${classes.agencies__img_2}`}
-          />
-          <img
-            src={agenciesImgMan}
-            alt="agenciesImg2"
-            className={classes.agencies__img_man}
-          />
-
-          <h2 className={classes.agencies__title}>
-            Built with <img src={heartImg} alt="heart" /> for Marketing Agencies
-          </h2>
-          <div className={classes.agencies__descr}>
-            And anyone looking for high-ticket clients
-          </div>
-
-          <div className={classes.agencies__list}>
-            <div className={classes.agencies__list_item}>
-              <SpriteIcon
-                id="icon-targeting-1"
-                className={classes.agencies__list_item__img}
-              />
-              <div className={classes.agencies__list_item__descr}>
-                Target by demographics <br /> and location
-              </div>
-            </div>
-
-            <div className={classes.agencies__list_item}>
-              <SpriteIcon
-                id="icon-targeting-2"
-                className={classes.agencies__list_item__img}
-              />
-              <div className={classes.agencies__list_item__descr}>
-                Target by Job-title (+negative keywords)
-              </div>
-            </div>
-
-            <div className={classes.agencies__list_item}>
-              <SpriteIcon
-                id="icon-targeting-3"
-                className={classes.agencies__list_item__img}
-              />
-              <div className={classes.agencies__list_item__descr}>
-                Target by Industry and Interest
-              </div>
-            </div>
-
-            <div className={classes.agencies__list_item}>
-              <SpriteIcon
-                id="icon-targeting-4"
-                className={classes.agencies__list_item__img}
-              />
-              <div className={classes.agencies__list_item__descr}>
-                And more! <br /> Lorem ipsum dolor set
-              </div>
-            </div>
-          </div>
-        </CustomContainer>
-      </section>
-    );
-  }
-}
 
 export default withStyles(styles)(AgenciesSection);

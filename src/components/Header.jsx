@@ -102,8 +102,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '32px 40px',
+    padding: '28px 40px',
     backgroundColor: '#ffffff',
+    zIndex: 9999,
   },
   header__logo: {
     width: '186px',

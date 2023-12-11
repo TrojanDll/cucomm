@@ -31,8 +31,8 @@ class CalculatorSection extends Component {
       <section className={classes.calculator}>
         <CustomContainer>
           <div className={classes.calculatorWrapper}>
-            <h2 className={classes.calculator__title}>Calculate Booked Appointments and Profit</h2>
-            <div className={classes.calculator__switcher}>
+            <h2 className={classes.title}>Calculate Booked Appointments and Profit</h2>
+            <div className={classes.switcher}>
               <CalculatorSwitcher
                 toggleIsFirstPage={toggleIsFirstPage}
                 firstParameter="For yourself"
@@ -41,28 +41,26 @@ class CalculatorSection extends Component {
               />
             </div>
 
-            <form name="calculator-for-yourself" className={classes.calculator__contentWrapper}>
+            <form name="calculator-for-yourself" className={classes.contentWrapper}>
               <div
-                className={classes.calculator__forYourself}
+                className={classes.forYourself}
                 style={isFirstPage ? { display: 'block' } : { display: 'none' }}>
-                <div className={classes.calculator__forYourself__booked}>
-                  <h4 className={classes.calculator__forYourself__booked__title}>
-                    Booked Appointments
-                  </h4>
+                <div className={classes.forYourselfBooked}>
+                  <h4 className={classes.forYourselfBookedTitle}>Booked Appointments</h4>
 
-                  <div className={classes.calculator__forYourself__booked__inputs}>
-                    <div className={classes.calculator__forYourself__booked__input}>
+                  <div className={classes.forYourselfBookedInputs}>
+                    <div className={classes.forYourselfBookedInput}>
                       <CustomInput title="Accounts in use" />
                     </div>
 
-                    <div className={classes.calculator__forYourself__booked__input}>
+                    <div className={classes.forYourselfBookedInput}>
                       <CustomInput
                         placeholder="%"
                         title="Conversion to accepted friend request (FR)"
                       />
                     </div>
 
-                    <div className={classes.calculator__forYourself__booked__input}>
+                    <div className={classes.forYourselfBookedInput}>
                       <CustomInput
                         placeholder="%"
                         title="Conversion from accepted FR to booked call"
@@ -71,43 +69,43 @@ class CalculatorSection extends Component {
                   </div>
 
                   <button
-                    className={classes.calculator__forYourself__button}
+                    className={classes.forYourselfButton}
                     onClick={(e) => toggleResultsVisibility(e)}>
                     Calculate
                   </button>
                 </div>
 
-                <div className={classes.calculator__forYourself__profit}>
-                  <h4 className={classes.calculator__forYourself__profit__title}>Profit</h4>
+                <div className={classes.forYourselfProfit}>
+                  <h4 className={classes.forYourselfProfitTitle}>Profit</h4>
 
-                  <div className={classes.calculator__forYourself__profit__inputsWrapper}>
-                    <div className={classes.calculator__forYourself__profit__inputs}>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                  <div className={classes.forYourselfProfitInputsWrapper}>
+                    <div className={classes.forYourselfProfitInputs}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput placeholder="%" title="Conversion from call to sale" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Average earnings from 1 client" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Employee monthly expenses" />
                       </div>
                     </div>
 
-                    <div className={classes.calculator__forYourself__profit__inputs}>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                    <div className={classes.forYourselfProfitInputs}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Account" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Software" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Proxies" />
                       </div>
                     </div>
                   </div>
 
                   <button
-                    className={classes.calculator__forYourself__button}
+                    className={classes.forYourselfButton}
                     onClick={(e) => toggleResultsVisibility(e)}>
                     Calculate
                   </button>
@@ -115,26 +113,24 @@ class CalculatorSection extends Component {
               </div>
 
               <div
-                className={`${classes.calculator__forClients} ${classes.calculator__forYourself}`}
+                className={`${classes.forClients} ${classes.forYourself}`}
                 style={isFirstPage ? { display: 'none' } : { display: 'block' }}>
-                <div className={classes.calculator__forYourself__booked}>
-                  <h4 className={classes.calculator__forYourself__booked__title}>
-                    Booked Appointments
-                  </h4>
+                <div className={classes.forYourselfBooked}>
+                  <h4 className={classes.forYourselfBookedTitle}>Booked Appointments</h4>
 
-                  <div className={classes.calculator__forYourself__booked__inputs}>
-                    <div className={classes.calculator__forYourself__booked__input}>
+                  <div className={classes.forYourselfBookedInputs}>
+                    <div className={classes.forYourselfBookedInput}>
                       <CustomInput title="Accounts in use" />
                     </div>
 
-                    <div className={classes.calculator__forYourself__booked__input}>
+                    <div className={classes.forYourselfBookedInput}>
                       <CustomInput
                         placeholder="%"
                         title="Conversion to accepted friend request (FR)"
                       />
                     </div>
 
-                    <div className={classes.calculator__forYourself__booked__input}>
+                    <div className={classes.forYourselfBookedInput}>
                       <CustomInput
                         placeholder="%"
                         title="Conversion from accepted FR to booked call"
@@ -143,50 +139,48 @@ class CalculatorSection extends Component {
                   </div>
 
                   <button
-                    className={classes.calculator__forYourself__button}
+                    className={classes.forYourselfButton}
                     onClick={(e) => toggleResultsVisibility(e)}>
                     Calculate
                   </button>
                 </div>
 
-                <div className={classes.calculator__forYourself__profit}>
-                  <h4 className={classes.calculator__forYourself__profit__title}>Profit</h4>
+                <div className={classes.forYourselfProfit}>
+                  <h4 className={classes.forYourselfProfitTitle}>Profit</h4>
 
-                  <div className={classes.calculator__forYourself__profit__inputsWrapper}>
-                    <div className={classes.calculator__forYourself__profit__inputs}>
-                      <div className={classes.calculator__forYourself__profit__switcher}>
-                        <div className={classes.calculator__forYourself__profit__switcherText}>
-                          Type of payment
-                        </div>
+                  <div className={classes.forYourselfProfitInputsWrapper}>
+                    <div className={classes.forYourselfProfitInputs}>
+                      <div className={classes.forYourselfProfitSwitcher}>
+                        <div className={classes.forYourselfProfitSwitcherText}>Type of payment</div>
                         <CalculatorSwitcher
                           firstParameter="Monthly Fix"
                           secondParameter="Per Appointment"
                           isSmall={true}
                         />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Average earnings from 1 client" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Employee monthly expenses" />
                       </div>
                     </div>
 
-                    <div className={classes.calculator__forYourself__profit__inputs}>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                    <div className={classes.forYourselfProfitInputs}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Account" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Software" />
                       </div>
-                      <div className={classes.calculator__forYourself__profit__input}>
+                      <div className={classes.forYourselfProfitInput}>
                         <CustomInput withDollar title="Proxies" />
                       </div>
                     </div>
                   </div>
 
                   <button
-                    className={classes.calculator__forYourself__button}
+                    className={classes.forYourselfButton}
                     onClick={(e) => toggleResultsVisibility(e)}>
                     Calculate
                   </button>
@@ -195,7 +189,7 @@ class CalculatorSection extends Component {
             </form>
 
             <div
-              className={classes.calculator__results}
+              className={classes.results}
               style={resultsOpened ? { display: 'block' } : { display: 'none' }}>
               <CalculatorResults />
             </div>
@@ -219,18 +213,18 @@ const styles = {
     background: '#fff',
     filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2))',
   },
-  calculator__title: {
+  title: {
     fontSize: '40px',
     fontWeight: 500,
     lineHeight: '48px',
     textAlign: 'center',
   },
-  calculator__switcher: {
+  switcher: {
     marginTop: '24px',
     display: 'flex',
     justifyContent: 'center',
   },
-  calculator__contentWrapper: {
+  contentWrapper: {
     marginTop: '32px',
     width: '100%',
     height: '464px',
@@ -238,19 +232,19 @@ const styles = {
     border: '1px solid var(--light-grey-color)',
     borderCollapse: 'collapse',
   },
-  calculator__forYourself__booked: {
+  forYourselfBooked: {
     marginTop: '32px',
     marginLeft: '45px',
   },
-  calculator__forYourself__booked__title: {
+  forYourselfBookedTitle: {
     fontSize: '24px',
     fontWeight: 500,
     lineHeight: '32px',
   },
-  calculator__forYourself__booked__input: {
+  forYourselfBookedInput: {
     marginTop: '20px',
   },
-  calculator__forYourself__button: {
+  forYourselfButton: {
     marginTop: '24px',
     width: '138px',
     height: '48px',
@@ -264,10 +258,10 @@ const styles = {
     fontWeight: 600,
     lineHeight: '24px',
   },
-  calculator__forYourself: {
+  forYourself: {
     position: 'relative',
   },
-  calculator__forYourself__profit: {
+  forYourselfProfit: {
     position: 'absolute',
     top: '-33px',
     right: '-1px',
@@ -277,23 +271,23 @@ const styles = {
     border: '1px solid var(--light-grey-color)',
     padding: '35px 45px 40px',
   },
-  calculator__forYourself__profit__title: {
+  forYourselfProfitTitle: {
     fontSize: '24px',
     fontWeight: 500,
     lineHeight: '32px',
   },
-  calculator__forYourself__profit__inputsWrapper: {
+  forYourselfProfitInputsWrapper: {
     display: 'flex',
     columnGap: '30px',
   },
-  calculator__forYourself__profit__inputs: {
+  forYourselfProfitInputs: {
     width: '297px',
   },
-  calculator__forYourself__profit__input: {
+  forYourselfProfitInput: {
     display: 'inline-flex',
     marginTop: '20px',
   },
-  calculator__forYourself__profit__switcherText: {
+  forYourselfProfitSwitcher: {
     marginTop: '20px',
     marginBottom: '8px',
     fontSize: '14px',
@@ -305,7 +299,7 @@ const styles = {
     calculatorWrapper: {
       minHeight: '1230px',
     },
-    calculator__forYourself__profit: {
+    forYourselfProfit: {
       padding: '40px 45px 40px',
       marginTop: '20px',
       position: 'relative',
@@ -316,7 +310,7 @@ const styles = {
       borderTopLeftRadius: '0',
       borderTopRightRadius: '0',
     },
-    calculator__results: {
+    results: {
       marginTop: '460px',
     },
   },
@@ -328,24 +322,24 @@ const styles = {
     calculatorWrapper: {
       minHeight: '1550px',
     },
-    calculator__forYourself__profit__inputsWrapper: {
+    forYourselfProfitInputsWrapper: {
       flexWrap: 'wrap',
     },
-    calculator__forYourself__profit: {
+    forYourselfProfit: {
       height: 'auto',
       margin: 0,
       top: '-19px',
     },
-    calculator__forYourself__booked: {
+    forYourselfBooked: {
       height: '432px',
     },
-    calculator__results: {
+    results: {
       marginTop: '764px',
     },
   },
 
   '@media (max-width: 768px)': {
-    calculator__title: {
+    title: {
       fontSize: '44px',
       lineHeight: '56px',
     },
@@ -355,37 +349,37 @@ const styles = {
   },
 
   '@media (max-width: 576px)': {
-    calculator__title: {
+    title: {
       fontSize: '32px',
       lineHeight: '40px',
     },
-    calculator__switcher: {
+    switcher: {
       padding: '0 20px',
     },
     calculatorWrapper: {
       minHeight: '1530px',
       padding: '64px 10px 10px 10px',
     },
-    calculator__forYourself__booked: {
+    forYourselfBooked: {
       margin: 0,
       padding: '32px 20px 0 20px',
       height: '450px',
     },
-    calculator__forYourself__booked__title: {
+    forYourselfBookedTitle: {
       fontSize: '18px',
       fontWeight: 600,
       lineHeight: '24px',
     },
-    calculator__contentWrapper: {
+    contentWrapper: {
       height: '485px',
     },
-    calculator__forYourself__profit: {
+    forYourselfProfit: {
       padding: '42px 20px',
       height: 'auto',
       margin: 0,
       top: '17px',
     },
-    calculator__forYourself__profit__title: {
+    forYourselfProfitTitle: {
       fontSize: '18px',
       lineHeight: '24px',
       fontWeight: 600,
@@ -393,7 +387,7 @@ const styles = {
   },
 
   // '@media (max-width: 387px)': {
-  //   calculator__forYourself__profit: {
+  //   forYourselfProfit: {
   //     marginTop: '18px',
   //   },
   // },

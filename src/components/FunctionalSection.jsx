@@ -15,67 +15,61 @@ class FunctionalSection extends Component {
     return (
       <section className={classes.functional}>
         <CustomContainer>
-          <div className={classes.functional__item}>
-            <div className={classes.functional__itemTextWrapper}>
-              <SpriteIcon className={classes.functional__itemImg} id="icon-deatiled-statistics" />
-              <div className={classes.functional__itemText}>Detailed in-depth statistics</div>
+          <div className={classes.item}>
+            <div className={classes.itemTextWrapper}>
+              <SpriteIcon className={classes.itemImg} id="icon-deatiled-statistics" />
+              <div className={classes.itemText}>Detailed in-depth statistics</div>
             </div>
 
-            <img className={classes.functional__img} src={statistics} alt="" />
+            <img className={classes.img} src={statistics} alt="" />
           </div>
 
-          <div className={classes.functional__item}>
-            <img
-              className={`${classes.functional__img} ${classes.functional__img_leftSide}`}
-              src={funnel}
-              alt=""
-            />
+          <div className={classes.item}>
+            <img className={`${classes.img} ${classes.imgLeftSide}`} src={funnel} alt="" />
 
-            <div className={classes.functional__itemTextWrapper}>
-              <SpriteIcon className={classes.functional__itemImg} id="icon-crm" />
-              <div className={classes.functional__itemText}>
+            <div className={classes.itemTextWrapper}>
+              <SpriteIcon className={classes.itemImg} id="icon-crm" />
+              <div className={classes.itemText}>
                 CRM to track your <br /> leads
               </div>
             </div>
           </div>
 
-          <div className={classes.functional__item}>
-            <div className={classes.functional__itemTextWrapper}>
-              <SpriteIcon className={classes.functional__itemImg} id="icon-parsing" />
-              <div className={classes.functional__itemText}>
-                Parse from anywhere of the Facebook!
-              </div>
+          <div className={classes.item}>
+            <div className={classes.itemTextWrapper}>
+              <SpriteIcon className={classes.itemImg} id="icon-parsing" />
+              <div className={classes.itemText}>Parse from anywhere of the Facebook!</div>
             </div>
 
-            <div className={`${classes.functional__img} ${classes.functional__list}`}>
-              <div className={classes.functional__list__item}>
-                <SpriteIcon id="icon-groups" className={classes.functional__list__itemImg} />
-                <div className={classes.functional__list__itemText}>Groups</div>
+            <div className={`${classes.img} ${classes.list}`}>
+              <div className={classes.listItem}>
+                <SpriteIcon id="icon-groups" className={classes.listItemImg} />
+                <div className={classes.listItemText}>Groups</div>
               </div>
 
-              <div className={classes.functional__list__item}>
-                <SpriteIcon id="icon-friend-list" className={classes.functional__list__itemImg} />
-                <div className={classes.functional__list__itemText}>Friend Lists</div>
+              <div className={classes.listItem}>
+                <SpriteIcon id="icon-friend-list" className={classes.listItemImg} />
+                <div className={classes.listItemText}>Friend Lists</div>
               </div>
 
-              <div className={classes.functional__list__item}>
-                <SpriteIcon id="icon-money-flower" className={classes.functional__list__itemImg} />
-                <div className={classes.functional__list__itemText}>Business Pages</div>
+              <div className={classes.listItem}>
+                <SpriteIcon id="icon-money-flower" className={classes.listItemImg} />
+                <div className={classes.listItemText}>Business Pages</div>
               </div>
 
-              <div className={classes.functional__list__item}>
-                <SpriteIcon id="icon-lens-people" className={classes.functional__list__itemImg} />
-                <div className={classes.functional__list__itemText}>People from search</div>
+              <div className={classes.listItem}>
+                <SpriteIcon id="icon-lens-people" className={classes.listItemImg} />
+                <div className={classes.listItemText}>People from search</div>
               </div>
 
-              <div className={classes.functional__list__item}>
-                <SpriteIcon id="icon-lens-money" className={classes.functional__list__itemImg} />
-                <div className={classes.functional__list__itemText}>Business Pages from search</div>
+              <div className={classes.listItem}>
+                <SpriteIcon id="icon-lens-money" className={classes.listItemImg} />
+                <div className={classes.listItemText}>Business Pages from search</div>
               </div>
 
-              <div className={classes.functional__list__item}>
-                <SpriteIcon id="icon-marketplaces" className={classes.functional__list__itemImg} />
-                <div className={classes.functional__list__itemText}>Marketplaces</div>
+              <div className={classes.listItem}>
+                <SpriteIcon id="icon-marketplaces" className={classes.listItemImg} />
+                <div className={classes.listItemText}>Marketplaces</div>
               </div>
             </div>
           </div>
@@ -90,7 +84,7 @@ const styles = {
     paddingTop: '115px',
     paddingBottom: '80px',
   },
-  functional__item: {
+  item: {
     position: 'relative',
     '&:nth-child(2)': {
       marginTop: '268px',
@@ -101,20 +95,20 @@ const styles = {
       marginTop: '107px',
     },
   },
-  functional__itemTextWrapper: {
+  itemTextWrapper: {
     width: '407px',
   },
-  functional__itemImg: {
+  itemImg: {
     width: '160px',
     height: '155px',
     flexShrink: 0,
   },
-  functional__itemText: {
+  itemText: {
     fontSize: '40px',
     fontWeight: 300,
     marginTop: '16px',
   },
-  functional__img: {
+  img: {
     position: 'absolute',
     top: 0,
     right: 0,
@@ -125,13 +119,13 @@ const styles = {
     borderRadius: '24px',
     zIndex: 2,
   },
-  functional__img_leftSide: {
+  imgLeftSide: {
     top: 'auto',
     bottom: 0,
     left: 0,
     zIndex: 1,
   },
-  functional__list: {
+  list: {
     padding: '64px 110px',
     display: 'flex',
     flexWrap: 'wrap',
@@ -139,16 +133,16 @@ const styles = {
     rowGap: '48px',
     background: '#ffffff',
   },
-  functional__list__item: {
+  listItem: {
     width: '188px',
   },
-  functional__list__itemImg: {
+  listItemImg: {
     display: 'block',
     width: '80px',
     height: '80px',
     margin: '0 auto',
   },
-  functional__list__itemText: {
+  listItemText: {
     fontSize: '18px',
     fontWeight: 400,
     marginTop: '16px',
@@ -160,7 +154,7 @@ const styles = {
       paddingBottom: '0',
       minHeight: '2330px',
     },
-    functional__item: {
+    item: {
       flexWrap: 'wrap',
       justifyContent: 'center',
       margin: 0,
@@ -171,21 +165,21 @@ const styles = {
         marginTop: '72px',
       },
     },
-    functional__itemTextWrapper: {
+    itemTextWrapper: {
       order: 1,
     },
-    functional__itemTextWrapper: {
+    itemTextWrapper: {
       width: '100%',
       textAlign: 'center',
     },
-    functional__img: {
+    img: {
       position: 'static',
       display: 'block',
       margin: '0 auto',
       marginTop: '36px',
       order: 2,
     },
-    functional__list: {
+    list: {
       display: 'flex',
       position: 'absolute',
       left: 0,
@@ -199,11 +193,11 @@ const styles = {
     functional: {
       minHeight: '2380px',
     },
-    functional__img: {
+    img: {
       width: '100%',
       height: 'auto',
     },
-    functional__list: {
+    list: {
       top: '265px',
     },
   },
@@ -212,7 +206,7 @@ const styles = {
     functional: {
       minHeight: '2200px',
     },
-    functional__list: {
+    list: {
       top: '300px',
       padding: '40px 20px',
       justifyContent: 'space-around',
@@ -224,22 +218,22 @@ const styles = {
       paddingTop: '64px',
       minHeight: '1800px',
     },
-    functional__img: {
+    img: {
       borderRadius: '12px',
       width: '315px',
     },
-    functional__itemText: {
+    itemText: {
       fontSize: '32px',
       lineHeight: '40px',
     },
-    functional__list__item: {
+    listItem: {
       width: 'calc(50% - 16px)',
     },
-    functional__list: {
+    list: {
       justifyContent: 'space-between',
       zIndex: 999,
     },
-    functional__item: {
+    item: {
       '&:nth-child(2)': {
         marginTop: '40px',
       },

@@ -142,6 +142,69 @@ const styles = {
       background: 'var(--hover-color)',
     },
   },
+
+  '@media (max-width: 1320px)': {
+    wrapper: {
+      flexWrap: 'wrap',
+      rowGap: '48px',
+    },
+    sign: {
+      margin: '0 auto',
+    },
+    cardItem: {
+      margin: '0 auto',
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    cardItem: {
+      width: '100%',
+      background: 'none',
+      background: '#ffffff',
+      borderRadius: '24px',
+    },
+    inputWrapper: {
+      width: '100%',
+    },
+    cardItemTitle: {
+      fontSize: '22px',
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    aboutSection: {
+      padding: '64px 0',
+    },
+    text: {
+      fontSize: '18px',
+      lineHeight: '24px',
+      fontWeight: 400,
+    },
+    cardItem: {
+      padding: '40px 30px',
+      height: 'auto',
+    },
+    inputWrapper: {
+      border: 'none',
+      flexWrap: 'wrap',
+      rowGap: '8px',
+      padding: 0,
+      height: 'auto',
+    },
+    input: {
+      height: '64px',
+      width: '100%',
+      border: '1px solid var(--light-grey-color)',
+      borderRadius: '9999px',
+      padding: '0 20px',
+      '&::placeholder': {
+        textAlign: 'center',
+      },
+    },
+    button: {
+      width: '100%',
+    },
+  },
 };
 
 export default withStyles(styles)(AboutSection);

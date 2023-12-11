@@ -13,7 +13,12 @@ class Footer extends Component {
     return (
       <footer className={classes.footer}>
         <CustomContainer>
+          {/* <SpriteIcon id="icon-logo-star" className={classes.logoStar} /> */}
           <div className={classes.wrapper}>
+            <div className={`${classes.footerColumnMobile}`}>
+              <SpriteIcon id="icon-logo" className={classes.logoMobile} />
+            </div>
+
             <div className={classes.footerColumn}>
               <SpriteIcon id="icon-logo" className={classes.logo} />
               <SpriteIcon id="icon-trustpilot-rating-footer" className={classes.trustpilotImg} />
@@ -99,8 +104,15 @@ class Footer extends Component {
 }
 
 const styles = {
+  footerColumnMobile: {
+    display: 'none',
+  },
+  // logoStar: {
+  //   display: 'none',
+  // },
   footer: {
     padding: '102px 0 88px 0',
+    position: 'relative',
   },
   wrapper: {
     display: 'flex',
@@ -205,6 +217,122 @@ const styles = {
   cardLink: {
     width: '56px',
     height: '56px',
+  },
+
+  '@media (max-width: 1320px)': {
+    wrapper: {
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      rowGap: '48px',
+    },
+    footerColumn: {
+      width: '50%',
+      paddingLeft: '100px',
+      '&:first-child': {
+        paddingLeft: 0,
+        width: '50%',
+      },
+      '&:nth-child(2)': {
+        width: '50%',
+        paddingLeft: 0,
+        paddingRight: '200px',
+      },
+      '&:nth-child(3)': {
+        width: '50%',
+      },
+      '&:nth-child(4)': {
+        width: '50%',
+        paddingLeft: 0,
+      },
+    },
+  },
+
+  '@media (max-width: 992px)': {
+    wrapper: {
+      justifyContent: 'space-between',
+    },
+    footerColumn: {
+      '&:nth-child(4)': {
+        width: '200px',
+      },
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    footerColumn: {
+      width: '100%',
+      paddingLeft: 0,
+      '&:first-child': {
+        paddingLeft: 0,
+        width: '100%',
+        order: 2,
+      },
+      '&:nth-child(2)': {
+        width: '100%',
+        paddingLeft: 0,
+        paddingRight: '200px',
+        order: 1,
+      },
+      '&:nth-child(3)': {
+        width: '100%',
+        paddingLeft: 0,
+      },
+      '&:nth-child(4)': {
+        width: '100%',
+        paddingLeft: 0,
+      },
+    },
+    logo: {
+      display: 'none',
+    },
+    footerColumnMobile: {
+      display: 'block',
+      width: '186px',
+      height: '52px',
+      paddingBottom: '56px',
+    },
+    logoMobile: {
+      width: '186px',
+      height: '52px',
+    },
+    // logoStar: {
+    //   display: 'block',
+    //   position: 'absolute',
+    //   right: '-64px',
+    //   top: '64px',
+    //   width: '289px',
+    //   height: '325px',
+    // },
+  },
+
+  '@media (max-width: 576px)': {
+    footer: {
+      padding: '64px 0 40px 0',
+    },
+    wrapper: {
+      rowGap: '56px',
+    },
+    card: {
+      width: '100%',
+      padding: '40px 30px',
+    },
+    footerColumn: {
+      '&:nth-child(2)': {
+        paddingRight: '0',
+      },
+    },
+    cardTitle: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    cardDescr: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    cardLink: {
+      width: '39px',
+      height: '39px',
+    },
   },
 };
 

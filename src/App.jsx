@@ -40,9 +40,9 @@ function App() {
         <FunctionalSection />
         <SafeSection />
         <CasesSection />
-        {/* <FAQSection />
+        <FAQSection />
         <AboutSection />
-        <Footer /> */}
+        <Footer />
       </main>
     </>
   );

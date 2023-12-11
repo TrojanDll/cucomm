@@ -74,8 +74,26 @@ const styles = {
     transition: 'all 0.3s',
   },
   descrActive: {
-    maxHeight: '300px',
+    maxHeight: '500px',
     paddingBottom: '32px',
+  },
+
+  '@media (max-width: 576px)': {
+    header: {
+      padding: '24px 0',
+    },
+    title: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    descrActive: {
+      paddingBottom: '24px',
+    },
+    chevron: {
+      marginTop: '11px',
+      width: '16px',
+      height: '8px',
+    },
   },
 };
 

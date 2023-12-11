@@ -100,6 +100,34 @@ const styles = {
     marginTop: '8px',
     width: '844px',
   },
+
+  '@media (max-width: 992px)': {
+    list: {
+      width: '100%',
+    },
+  },
+
+  '@media (max-width: 768px)': {
+    title: {
+      fontSize: '44px',
+    },
+    list: {
+      marginTop: '24px',
+    },
+  },
+
+  '@media (max-width: 576px)': {
+    faqSection: {
+      padding: '64px 0',
+    },
+    title: {
+      fontSize: '32px',
+      lineHeight: '40px',
+    },
+    list: {
+      marginTop: '0',
+    },
+  },
 };
 
 export default withStyles(styles)(FAQSection);

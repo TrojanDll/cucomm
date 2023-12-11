@@ -264,7 +264,7 @@ const styles = {
   '@media (max-width: 576px)': {
     casesSection: {
       paddingTop: '64px',
-      paddingBottom: '64px',
+      paddingBottom: '32px',
     },
     caseWrapper: {
       '&:last-child': {

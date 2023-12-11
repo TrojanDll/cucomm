@@ -14,20 +14,20 @@ class KillerFeatureSection extends React.Component {
     return (
       <section className={classes.feature}>
         <CustomContainer>
-          <div className={classes.feature__sign}>KILLER FEATURE</div>
+          <div className={classes.sign}>KILLER FEATURE</div>
 
-          <h2 className={classes.feature__title}>Common inbox</h2>
-          <div className={classes.feature__descr}>One inbox for all your Facebook accounts</div>
+          <h2 className={classes.title}>Common inbox</h2>
+          <div className={classes.descr}>One inbox for all your Facebook accounts</div>
 
           <img
             src={featureImg1}
             alt="man-with-glasses"
-            className={`${classes.feature__img} ${classes.feature__img_1}`}
+            className={`${classes.img} ${classes.img1}`}
           />
           <img
             src={featureImg2}
             alt="woman-with-glasses"
-            className={`${classes.feature__img} ${classes.feature__img_2}`}
+            className={`${classes.img} ${classes.img2}`}
           />
         </CustomContainer>
       </section>
@@ -41,7 +41,7 @@ const styles = {
     paddingTop: '112px',
     backgroundColor: 'var(--text-color)',
   },
-  feature__sign: {
+  sign: {
     margin: '0 auto',
     width: '131px',
     display: 'flex',
@@ -57,7 +57,7 @@ const styles = {
     background: '#ffffff',
     padding: '0 16px',
   },
-  feature__title: {
+  title: {
     marginTop: '24px',
     color: '#ffffff',
     fontWeight: 500,
@@ -65,7 +65,7 @@ const styles = {
     lineHeight: '56px',
     textAlign: 'center',
   },
-  feature__descr: {
+  descr: {
     marginTop: '16px',
     color: '#ffffff',
     fontWeight: 300,
@@ -73,35 +73,35 @@ const styles = {
     lineHeight: '32px',
     textAlign: 'center',
   },
-  feature__img: {
+  img: {
     position: 'absolute',
     width: '188px',
     height: '188px',
     borderRadius: '24px',
   },
-  feature__img_1: {
+  img1: {
     left: 0,
     top: '-160px',
   },
-  feature__img_2: {
+  img2: {
     right: 0,
     bottom: '-104px',
   },
 
   '@media (max-width: 992px)': {
-    feature__img_1: {
+    img1: {
       display: 'none',
     },
-    feature__img_2: {
+    img2: {
       display: 'none',
     },
   },
 
   '@media (max-width: 768px)': {
-    feature__title: {
+    title: {
       fontSize: '44px',
     },
-    feature__descr: {
+    descr: {
       fontSize: '22px',
     },
   },
@@ -111,11 +111,11 @@ const styles = {
       paddingBottom: '120px',
       paddingTop: '64px',
     },
-    feature__title: {
+    title: {
       fontSize: '32px',
       lineHeight: '40px',
     },
-    feature__descr: {
+    descr: {
       fontSize: '18px',
       lineHeight: '24px',
     },

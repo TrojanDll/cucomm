@@ -10,13 +10,13 @@ class ReviewsItem extends Component {
 
     return (
       <div className={classes.reviewsItem}>
-        <div className={classes.reviewsItem__sign}>{sign}</div>
-        <div className={classes.reviewsItem__text}>{text}</div>
-        <div className={classes.reviewsItem__profile}>
-          <img className={classes.reviewsItem__profileImg} src={profileImg} alt="profile" />
-          <div className={classes.reviewsItem__profile__text}>
-            <div className={classes.reviewsItem__profile__text__name}>{profileName}</div>
-            <div className={classes.reviewsItem__profile__text__descr}>{profileDescr}</div>
+        <div className={classes.sign}>{sign}</div>
+        <div className={classes.text}>{text}</div>
+        <div className={classes.profile}>
+          <img className={classes.profileImg} src={profileImg} alt="profile" />
+          <div className={classes.profileText}>
+            <div className={classes.name}>{profileName}</div>
+            <div className={classes.descr}>{profileDescr}</div>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@ const styles = {
     background: '#ffffff',
     filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.20))',
   },
-  reviewsItem__sign: {
+  sign: {
     height: '40px',
     display: 'inline-flex',
     alignItems: 'center',
@@ -47,27 +47,27 @@ const styles = {
     background: 'var(--secondary-color)',
     padding: '8px 16px',
   },
-  reviewsItem__text: {
+  text: {
     marginTop: '16px',
     fontSize: '24px',
     fontWeight: 300,
   },
-  reviewsItem__profile: {
+  profile: {
     marginTop: '24px',
     display: 'flex',
     columnGap: '16px',
     alignItems: 'center',
   },
-  reviewsItem__profileImg: {
+  profileImg: {
     flexShrink: 0,
     width: '80px',
     height: '80px',
   },
-  reviewsItem__profile__text__name: {
+  name: {
     fontSize: '18px',
     fontWeight: 600,
   },
-  reviewsItem__profile__text__descr: {
+  descr: {
     fontSize: '18px',
     fontWeight: 400,
   },
@@ -77,7 +77,7 @@ const styles = {
       width: '100%',
       padding: '30px',
     },
-    reviewsItem__text: {
+    text: {
       fontSize: '18px',
       lineHeight: '24px',
     },

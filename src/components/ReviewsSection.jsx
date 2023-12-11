@@ -44,31 +44,25 @@ class ReviewsSection extends Component {
     return (
       <section className={classes.reviews}>
         <CustomContainer>
-          <div className={classes.reviews__sign}>REVIEWS</div>
-          <h2 className={classes.reviews__title}>Clients reviews lorem ipsum</h2>
+          <div className={classes.sign}>REVIEWS</div>
+          <h2 className={classes.title}>Clients reviews lorem ipsum</h2>
 
-          <div className={classes.reviews__rate}>
+          <div className={classes.rate}>
             Our customers say <span>Great</span>{' '}
-            <SpriteIcon className={classes.reviews__rate__starsImg} id="icon-trustpilot-raiting" />
+            <SpriteIcon className={classes.starsImg} id="icon-trustpilot-raiting" />
             4.1 out of 5 based on XX reviews
-            <SpriteIcon
-              className={classes.reviews__rate__trustpilotImg}
-              id="icon-trustpilot-logo"
-            />
+            <SpriteIcon className={classes.trustpilotImg} id="icon-trustpilot-logo" />
           </div>
 
           <div className={classes.reviewsRateMobile}>
-            <SpriteIcon
-              className={classes.reviews__rate__trustpilotImg}
-              id="icon-trustpilot-logo"
-            />
-            <SpriteIcon className={classes.reviews__rate__starsImg} id="icon-trustpilot-raiting" />
+            <SpriteIcon className={classes.trustpilotImg} id="icon-trustpilot-logo" />
+            <SpriteIcon className={classes.starsImg} id="icon-trustpilot-raiting" />
             <div>
               TrustScore <span>4.1 | XX</span> reviews
             </div>
           </div>
 
-          <div className={classes.reviews__items}>
+          <div className={classes.items}>
             {reviewsData.map((item) => (
               <ReviewsItem
                 sign={item.sign}
@@ -94,7 +88,7 @@ const styles = {
     padding: '112px 0',
     background: 'var(--lightest-grey-color)',
   },
-  reviews__sign: {
+  sign: {
     margin: '0 auto',
     width: '84px',
     height: '40px',
@@ -110,13 +104,13 @@ const styles = {
     background: '#ffffff',
     padding: '0 16px',
   },
-  reviews__title: {
+  title: {
     marginTop: '24px',
     fontSize: '48px',
     fontWeight: 500,
     textAlign: 'center',
   },
-  reviews__rate: {
+  rate: {
     marginTop: '28px',
     display: 'flex',
     alignItems: 'center',
@@ -129,17 +123,17 @@ const styles = {
       fontWeight: 500,
     },
   },
-  reviews__rate__starsImg: {
+  starsImg: {
     width: '127px',
     height: '24px',
     flexShrink: 0,
   },
-  reviews__rate__trustpilotImg: {
+  trustpilotImg: {
     width: '97px',
     height: '24px',
     flexShrink: 0,
   },
-  reviews__items: {
+  items: {
     marginTop: '48px',
     display: 'flex',
     alignItems: 'start',
@@ -147,7 +141,7 @@ const styles = {
   },
 
   '@media (max-width: 1320px)': {
-    reviews__items: {
+    items: {
       flexWrap: 'wrap',
       justifyContent: 'space-around',
       margin: '0 auto',
@@ -157,7 +151,7 @@ const styles = {
   },
 
   '@media (max-width: 992px)': {
-    reviews__rate: {
+    rate: {
       display: 'none',
     },
     reviewsRateMobile: {
@@ -177,18 +171,18 @@ const styles = {
         },
       },
     },
-    reviews__rate__trustpilotImg: {
+    trustpilotImg: {
       width: '153px',
       height: '38px',
     },
-    reviews__rate__starsImg: {
+    starsImg: {
       width: '205px',
       height: '38px',
     },
   },
 
   '@media (max-width: 768px)': {
-    reviews__title: {
+    title: {
       fontSize: '44px',
     },
   },
@@ -197,15 +191,15 @@ const styles = {
     reviews: {
       padding: '64px 0',
     },
-    reviews__title: {
+    title: {
       fontSize: '32px',
       lineHeight: '40px',
     },
-    reviews__rate__trustpilotImg: {
+    trustpilotImg: {
       width: '118px',
       height: '29px',
     },
-    reviews__rate__starsImg: {
+    starsImg: {
       width: '158px',
       height: '29px',
     },
@@ -216,7 +210,7 @@ const styles = {
         lineHeight: '24px',
       },
     },
-    reviews__items: {
+    items: {
       width: '100%',
     },
   },

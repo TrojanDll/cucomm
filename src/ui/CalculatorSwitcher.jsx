@@ -25,17 +25,17 @@ class CalculatorSwitcher extends React.Component {
 
     return window.innerWidth >= 576 ? (
       <button onClick={(e) => toggleSwitcher(e)}>
-        <div className={`${classes.switcher} ${isSmall ? classes.switcher_small : ''}`}>
+        <div className={`${classes.switcher} ${isSmall ? classes.switcherSmall : ''}`}>
           <div
-            className={`${classes.switcher__element} ${
-              switcherFirstPosition ? classes.switcher__element_active : ''
-            } ${isSmall ? classes.switcher__element_small : ''}`}>
+            className={`${classes.element} ${switcherFirstPosition ? classes.elementActive : ''} ${
+              isSmall ? classes.elementSmall : ''
+            }`}>
             {firstParameter}
           </div>
           <div
-            className={`${classes.switcher__element} ${
-              switcherFirstPosition ? '' : classes.switcher__element_active
-            } ${isSmall ? classes.switcher__element_small : ''}`}>
+            className={`${classes.element} ${switcherFirstPosition ? '' : classes.elementActive} ${
+              isSmall ? classes.elementSmall : ''
+            }`}>
             {secondParameter}
           </div>
         </div>
@@ -61,11 +61,12 @@ const styles = {
     border: '1px solid #B4B9BF',
     display: 'flex',
   },
-  switcher_small: {
+  switcherSmall: {
+    marginTop: '8px',
     width: '298px',
     height: '48px',
   },
-  switcher__element: {
+  element: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -79,14 +80,14 @@ const styles = {
     opacity: '0.5',
     color: 'var(--text-color)',
   },
-  switcher__element_small: {
+  elementSmall: {
     width: '143px',
     height: '40px',
     fontSize: '14px',
     fontWeight: 600,
     lineHeight: '20px',
   },
-  switcher__element_active: {
+  elementActive: {
     background: 'var(--grey-color)',
     opacity: '1',
     color: '#ffffff',
@@ -115,6 +116,7 @@ const styles = {
     },
   },
   switcherSmallMobile: {
+    marginTop: '8px',
     height: '48px',
     fontSize: '14px',
     lineHeight: '20px',

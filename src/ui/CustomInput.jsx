@@ -11,15 +11,11 @@ class CustomInput extends React.Component {
 
     return (
       <div className={classes.inputWrapper}>
-        <div className={classes.input__title}>{title}</div>
+        <div className={classes.title}>{title}</div>
         <div
-          className={`${classes.input__inputWrapper} ${
-            withDollar ? classes.input__input_withDollarWrapper : ''
-          }`}>
+          className={`${classes.inputWrapper} ${withDollar ? classes.inputWithDollarWrapper : ''}`}>
           <input
-            className={`${classes.input__input} ${
-              withDollar ? classes.input__input_withDollar : ''
-            }`}
+            className={`${classes.input} ${withDollar ? classes.inputWithDollar : ''}`}
             type="text"
             placeholder={placeholder}
           />
@@ -33,12 +29,12 @@ const styles = {
   inputWrapper: {
     width: '297px',
   },
-  input__title: {
+  title: {
     fontSize: '14px',
     fontWeight: 400,
     lineHeight: '20px',
   },
-  input__input: {
+  input: {
     marginTop: '8px',
     height: '48px',
     width: '100%',
@@ -58,7 +54,7 @@ const styles = {
       lineHeight: '24px',
     },
   },
-  input__input_withDollarWrapper: {
+  inputWithDollarWrapper: {
     position: 'relative',
     '&:before': {
       content: '"$"',
@@ -72,7 +68,7 @@ const styles = {
       lineHeight: '24px',
     },
   },
-  input__input_withDollar: {
+  inputWithDollar: {
     padding: '12px 32px 12px 46px',
   },
 
@@ -80,7 +76,7 @@ const styles = {
     inputWrapper: {
       width: '100%',
     },
-    input__input: {
+    input: {
       width: '100%',
     },
   },

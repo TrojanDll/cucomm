@@ -1,6 +1,66 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 
+class Sidebar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { sidebarOpened } = this.props;
+    const { classes } = this.props;
+
+    return (
+      <>
+        <header
+          style={sidebarOpened ? { left: '0%' } : { left: '-100%' }}
+          className={classes.sidebar}>
+          <nav className={classes.nav}>
+            <a href="#" className={classes.navLink}>
+              Download
+            </a>
+            <a href="#" className={classes.navLink}>
+              Products
+            </a>
+            <a href="#" className={classes.navLink}>
+              Help Desk
+            </a>
+            <a href="#" className={classes.navLink}>
+              Videos
+            </a>
+            <a href="#" className={classes.navLink}>
+              Blog
+            </a>
+            <a href="#" className={classes.navLink}>
+              Client Area
+            </a>
+          </nav>
+
+          <div className={classes.login}>
+            <button
+              fontSize="32px"
+              padding="12px 56px"
+              color="black"
+              fontWeight="400"
+              className={`${classes.btn} ${classes.loginBtn}`}>
+              Log in
+            </button>
+
+            <button
+              fontSize="32px"
+              padding="12px 56px"
+              primary="true"
+              background="var(--main-color)"
+              className={`${classes.btn} ${classes.signupBtn}`}>
+              Sign up
+            </button>
+          </div>
+        </header>
+      </>
+    );
+  }
+}
+
 const styles = {
   sidebar: {
     position: 'fixed',
@@ -16,7 +76,7 @@ const styles = {
   sidebar_opened: {
     left: '-100%',
   },
-  sidebar__navLink: {
+  navLink: {
     marginTop: '24px',
     display: 'block',
     color: 'var(--text-color)',
@@ -29,7 +89,7 @@ const styles = {
       marginTop: '0',
     },
   },
-  sidebar__login__btn: {
+  btn: {
     display: 'block',
     margin: '0 auto',
     marginTop: '10px',
@@ -44,11 +104,11 @@ const styles = {
     fontSize: '32px',
     lineHeight: '40px',
   },
-  sidebar__login__loginBtn: {
+  loginBtn: {
     fontWeight: 400,
     background: 'transparent',
   },
-  sidebar__login__signupBtn: {
+  signupBtn: {
     background: 'var(--main-color)',
     color: '#ffffff',
     fontWeight: 500,
@@ -57,68 +117,5 @@ const styles = {
     },
   },
 };
-
-class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { sidebarOpened } = this.props;
-    const { classes } = this.props;
-
-    return (
-      <>
-        <header
-          style={sidebarOpened ? { left: '0%' } : { left: '-100%' }}
-          className={classes.sidebar}
-        >
-          <nav className={classes.sidebar__nav}>
-            <a href="#" className={classes.sidebar__navLink}>
-              Download
-            </a>
-            <a href="#" className={classes.sidebar__navLink}>
-              Products
-            </a>
-            <a href="#" className={classes.sidebar__navLink}>
-              Help Desk
-            </a>
-            <a href="#" className={classes.sidebar__navLink}>
-              Videos
-            </a>
-            <a href="#" className={classes.sidebar__navLink}>
-              Blog
-            </a>
-            <a href="#" className={classes.sidebar__navLink}>
-              Client Area
-            </a>
-          </nav>
-
-          <div className={classes.sidebar__login}>
-            <button
-              fontSize="32px"
-              padding="12px 56px"
-              color="black"
-              fontWeight="400"
-              className={`${classes.sidebar__login__btn} ${classes.sidebar__login__loginBtn}`}
-            >
-              Log in
-            </button>
-
-            <button
-              fontSize="32px"
-              padding="12px 56px"
-              primary="true"
-              background="var(--main-color)"
-              className={`${classes.sidebar__login__btn} ${classes.sidebar__login__signupBtn}`}
-            >
-              Sign up
-            </button>
-          </div>
-        </header>
-      </>
-    );
-  }
-}
 
 export default withStyles(styles)(Sidebar);

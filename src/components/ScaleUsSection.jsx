@@ -16,32 +16,26 @@ class ScaleUsSection extends React.Component {
       <section className={classes.scale}>
         <CustomContainer>
           <div className={classes.scaleWrapper}>
-            <img src={scaleImg} alt="scale" className="scale__img" />
-            <div className={classes.scale__textWrapper}>
-              <div className={`${classes.scale__sign} ${classes.sign}`}>SOLUTION</div>
+            <img src={scaleImg} alt="scale" className="img" />
+            <div className={classes.textWrapper}>
+              <div className={`${classes.sign} ${classes.sign}`}>SOLUTION</div>
 
-              <h2 className={classes.scale__title}>Scale as much as you want without limits</h2>
+              <h2 className={classes.title}>Scale as much as you want without limits</h2>
 
-              <ul className={classes.scale__list}>
-                <li className={classes.scale__listItem}>Automated parsing</li>
-                <li className={classes.scale__listItem}>Targeting</li>
-                <li className={classes.scale__listItem}>Automated cold outreach with follow-ups</li>
-                <li className={classes.scale__listItem}>Split-test messages / Facebook accounts</li>
-                <li className={classes.scale__listItem}>CRM</li>
-                <li className={classes.scale__listItem}>Detailed statistics</li>
-                <li className={classes.scale__listItem}>
-                  Multi-account anti-detect browser in place
-                </li>
-                <li className={classes.scale__listItem}>Simple straightforward interface</li>
+              <ul className={classes.list}>
+                <li className={classes.listItem}>Automated parsing</li>
+                <li className={classes.listItem}>Targeting</li>
+                <li className={classes.listItem}>Automated cold outreach with follow-ups</li>
+                <li className={classes.listItem}>Split-test messages / Facebook accounts</li>
+                <li className={classes.listItem}>CRM</li>
+                <li className={classes.listItem}>Detailed statistics</li>
+                <li className={classes.listItem}>Multi-account anti-detect browser in place</li>
+                <li className={classes.listItem}>Simple straightforward interface</li>
               </ul>
 
-              <div className={classes.scale__buttons}>
-                <button className={`${classes.scale__button} ${classes.scale__button1}`}>
-                  Try now
-                </button>
-                <button className={`${classes.scale__button} ${classes.scale__button2}`}>
-                  Book a demo
-                </button>
+              <div className={classes.buttons}>
+                <button className={`${classes.button} ${classes.button1}`}>Try now</button>
+                <button className={`${classes.button} ${classes.button2}`}>Book a demo</button>
               </div>
             </div>
           </div>
@@ -60,10 +54,10 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
   },
-  scale__textWrapper: {
+  textWrapper: {
     maxWidth: '625px',
   },
-  scale__sign: {
+  sign: {
     width: '90px',
     display: 'flex',
     alignItems: 'center',
@@ -78,16 +72,16 @@ const styles = {
     background: '#ffffff',
     padding: '0 16px',
   },
-  scale__title: {
+  title: {
     marginTop: '24px',
     fontSize: '48px',
     fontWeight: '500',
     lineHeight: '56px',
   },
-  scale__list: {
+  list: {
     marginTop: '40px',
   },
-  scale__listItem: {
+  listItem: {
     marginTop: '16px',
     display: 'flex',
     columnGap: '24px',
@@ -106,12 +100,12 @@ const styles = {
       background: `url("${listPoint}") center center/cover no-repeat`,
     },
   },
-  scale__buttons: {
+  buttons: {
     marginTop: '40px',
     display: 'flex',
     columnGap: '16px',
   },
-  scale__button: {
+  button: {
     height: '72px',
     width: '166px',
     display: 'flex',
@@ -126,7 +120,7 @@ const styles = {
       outline: 'none',
     },
   },
-  scale__button1: {
+  button1: {
     border: 'none',
     background: 'var(--main-color)',
     color: '#ffffff',
@@ -134,7 +128,7 @@ const styles = {
       background: 'var(--hover-color)',
     },
   },
-  scale__button2: {
+  button2: {
     background: 'transparent',
     color: 'var(--main-color)',
     border: '1px solid var(--main-color)',
@@ -152,20 +146,20 @@ const styles = {
       flexWrap: 'wrap',
       justifyContent: 'center',
     },
-    scale__sign: {
+    sign: {
       margin: '0 auto',
       marginTop: '40px',
     },
-    scale__title: {
+    title: {
       textAlign: 'center',
     },
 
-    scale__buttons: {
+    buttons: {
       justifyContent: 'center',
     },
   },
   '@media (max-width: 768px)': {
-    scale__title: {
+    title: {
       fontSize: '44px',
       lineHeight: '52px',
     },
@@ -174,14 +168,14 @@ const styles = {
     scale: {
       paddingTop: '64px',
     },
-    scale__title: {
+    title: {
       fontSize: '32px',
       lineHeight: '40px',
     },
-    scale__textWrapper: {
+    textWrapper: {
       maxWidth: '100%',
     },
-    scale__list: {
+    list: {
       marginTop: '32px',
     },
   },

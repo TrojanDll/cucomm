@@ -11,45 +11,45 @@ class CalculatorResults extends Component {
 
     return (
       <div className={classes.results}>
-        <h4 className={classes.results__title}>Results</h4>
+        <h4 className={classes.title}>Results</h4>
 
-        <div className={classes.results__wrapper}>
-          <div className={classes.results__part}>
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Daily sended messages:</div>
-              <div className={classes.results__item__value}>1,000</div>
+        <div className={classes.wrapper}>
+          <div className={classes.part}>
+            <div className={classes.item}>
+              <div className={classes.itemText}>Daily sended messages:</div>
+              <div className={classes.itemValue}>1,000</div>
             </div>
 
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Cases booked daily:</div>
-              <div className={classes.results__item__value}>2</div>
+            <div className={classes.item}>
+              <div className={classes.itemText}>Cases booked daily:</div>
+              <div className={classes.itemValue}>2</div>
             </div>
 
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Cases booked monthly:</div>
-              <div className={classes.results__item__value}>40</div>
+            <div className={classes.item}>
+              <div className={classes.itemText}>Cases booked monthly:</div>
+              <div className={classes.itemValue}>40</div>
             </div>
           </div>
 
-          <div className={classes.results__part}>
-            <div className={`${classes.results__item} ${classes.results__item__text_withQuestion}`}>
-              <div className={classes.results__item__text}>Profit Per Appointment:</div>
-              <div className={classes.results__item__value}>$ 100</div>
+          <div className={classes.part}>
+            <div className={`${classes.item} ${classes.itemTextWithQuestion}`}>
+              <div className={classes.itemText}>Profit Per Appointment:</div>
+              <div className={classes.itemValue}>$ 100</div>
             </div>
 
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Total Monthly Profit:</div>
-              <div className={classes.results__item__value}>$ 100</div>
+            <div className={classes.item}>
+              <div className={classes.itemText}>Total Monthly Profit:</div>
+              <div className={classes.itemValue}>$ 100</div>
             </div>
 
-            <div className={classes.results__item}>
-              <div className={classes.results__item__text}>Total Monthly Expenses:</div>
-              <div className={classes.results__item__value}>$ 100</div>
+            <div className={classes.item}>
+              <div className={classes.itemText}>Total Monthly Expenses:</div>
+              <div className={classes.itemValue}>$ 100</div>
             </div>
           </div>
         </div>
 
-        <a href="#" className={classes.results__button}>
+        <a href="#" className={classes.button}>
           Try CUCOMM
         </a>
       </div>
@@ -68,17 +68,17 @@ const styles = {
     flexShrink: 0,
     padding: '32px 45px 40px 45px',
   },
-  results__title: {
+  title: {
     width: '100%',
     fontSize: '24px',
     fontWeight: 500,
     lineHeight: '32px',
   },
-  results__wrapper: {
+  wrapper: {
     display: 'flex',
     columnGap: '120px',
   },
-  results__part: {
+  part: {
     position: 'relative',
     '&:first-child': {
       '&::after': {
@@ -93,12 +93,12 @@ const styles = {
       },
     },
   },
-  results__item: {
+  item: {
     display: 'flex',
     columnGap: '16px',
     marginTop: '16px',
   },
-  results__item__text_withQuestion: {
+  itemTextWithQuestion: {
     '&::after': {
       content: '"?"',
       display: 'flex',
@@ -115,17 +115,17 @@ const styles = {
       cursor: 'pointer',
     },
   },
-  results__item__text: {
+  itemText: {
     fontSize: '24px',
     fontWeight: 300,
     lineHeight: '32px',
   },
-  results__item__value: {
+  itemValue: {
     fontSize: '24px',
     fontWeight: 500,
     lineHeight: '32px',
   },
-  results__button: {
+  button: {
     position: 'absolute',
     bottom: '20px',
     right: '45px',
@@ -145,10 +145,10 @@ const styles = {
   },
 
   '@media (max-width: 1320px)': {
-    results__wrapper: {
+    wrapper: {
       flexWrap: 'wrap',
     },
-    results__part: {
+    part: {
       '&:first-child': {
         '&::after': {
           bottom: '-24px',
@@ -164,26 +164,26 @@ const styles = {
   },
 
   '@media (max-width: 992px)': {
-    results__button: {
+    button: {
       position: 'static',
       marginTop: '24px',
     },
   },
 
   '@media (max-width: 768px)': {
-    results__item: {
+    item: {
       flexWrap: 'wrap',
     },
-    results__item__value: {
+    itemValue: {
       width: '100%',
     },
-    results__item__text_withQuestion: {
+    itemTextWithQuestion: {
       position: 'relative',
       '&::after': {
         position: 'absolute',
         right: 0,
       },
-      results__button: {
+      button: {
         height: '64px',
       },
     },
@@ -193,21 +193,21 @@ const styles = {
     results: {
       padding: '32px 20px',
     },
-    results__title: {
+    title: {
       fontSize: '18px',
       fontWeight: 600,
       lineHeight: '24px',
     },
-    results__item__text: {
+    itemText: {
       fontSize: '18px',
       lineHeight: '24px',
     },
-    results__item__value: {
+    itemValue: {
       fontSize: '18px',
       lineHeight: '24px',
       fontWeight: 600,
     },
-    results__button: {
+    button: {
       width: '100%',
       height: '64px',
       fontSize: '18px',

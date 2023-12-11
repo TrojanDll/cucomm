@@ -27,7 +27,7 @@ class Header extends React.Component {
         style={sidebarOpened ? { background: '#ffffff', paddingTop: '116px' } : {}}
         className={classes.header}>
         <div
-          className={classes.header__wrapper}
+          className={classes.wrapper}
           style={
             sidebarOpened
               ? {
@@ -39,45 +39,41 @@ class Header extends React.Component {
                 }
               : {}
           }>
-          <div className={classes.header__logo}>
-            <SpriteIcon id="icon-logo" className={classes.header__logo_img} />
+          <div className={classes.logo}>
+            <SpriteIcon id="icon-logo" className={classes.logoImg} />
           </div>
 
-          <nav className={classes.header__nav}>
-            <a href="#" className={classes.header__nav_link}>
+          <nav className={classes.nav}>
+            <a href="#" className={classes.navLink}>
               Download
             </a>
-            <a href="#" className={classes.header__nav_link}>
+            <a href="#" className={classes.navLink}>
               Products
             </a>
-            <a href="#" className={classes.header__nav_link}>
+            <a href="#" className={classes.navLink}>
               Help Desk
             </a>
-            <a href="#" className={classes.header__nav_link}>
+            <a href="#" className={classes.navLink}>
               Videos
             </a>
-            <a href="#" className={classes.header__nav_link}>
+            <a href="#" className={classes.navLink}>
               Blog
             </a>
-            <a href="#" className={classes.header__nav_link}>
+            <a href="#" className={classes.navLink}>
               Client Area
             </a>
           </nav>
 
-          <div className={classes.header__login}>
-            <button className={`${classes.header__login__btn} ${classes.header__login__loginBtn}`}>
-              Log in
-            </button>
+          <div className={classes.login}>
+            <button className={`${classes.btn} ${classes.loginBtn}`}>Log in</button>
 
-            <button className={`${classes.header__login__btn} ${classes.header__login__signupBtn}`}>
-              Sign up
-            </button>
+            <button className={`${classes.btn} ${classes.signupBtn}`}>Sign up</button>
           </div>
 
           <div
             className={
               sidebarOpened
-                ? `${classes.navToggle} ${classes.navToggle_opened}`
+                ? `${classes.navToggle} ${classes.navToggleOpened}`
                 : `${classes.navToggle}`
             }
             onClick={this.switchSidebar}>
@@ -98,7 +94,7 @@ const styles = {
     backgroundColor: '#ffffff',
   },
 
-  header__wrapper: {
+  wrapper: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -106,19 +102,19 @@ const styles = {
     backgroundColor: '#ffffff',
     zIndex: 9999,
   },
-  header__logo: {
+  logo: {
     width: '186px',
     height: '52px',
   },
-  header__logo_img: {
+  logoImg: {
     width: '186px',
     height: '52px',
   },
-  header__nav: {
+  nav: {
     display: 'flex',
     columnGap: '32px',
   },
-  header__nav_link: {
+  navLink: {
     display: 'block',
     color: 'var(--text-color)',
     fontSize: '18px',
@@ -143,7 +139,7 @@ const styles = {
       cursor: 'pointer',
     },
   },
-  navToggle_opened: {
+  navToggleOpened: {
     marginLeft: '5px',
     '& .barBot': {
       marginBottom: '0',
@@ -161,7 +157,7 @@ const styles = {
       marginBottom: '10px',
     },
   },
-  header__loginBtn: {
+  loginBtn: {
     padding: '12px 32px',
     fontSize: '18px',
     fontWeight: 400,
@@ -169,7 +165,7 @@ const styles = {
     border: 'none',
     borderRadius: '9999px',
   },
-  header__login__signupBtn: {
+  signupBtn: {
     padding: '12px 32px',
     fontSize: '18px',
     fontWeight: 600,
@@ -178,7 +174,7 @@ const styles = {
     border: 'none',
     borderRadius: '9999px',
   },
-  header__login__btn: {
+  btn: {
     padding: '12px 32px',
     border: 'none',
     textAlign: 'center',
@@ -186,11 +182,11 @@ const styles = {
     fontSize: '18px',
     lineHeight: '24px',
   },
-  header__login__loginBtn: {
+  loginBtn: {
     fontWeight: 400,
     background: 'transparent',
   },
-  header__login__signupBtn: {
+  signupBtn: {
     background: 'var(--main-color)',
     color: '#ffffff',
     fontWeight: 500,
@@ -200,21 +196,21 @@ const styles = {
   },
 
   '@media (max-width: 1200px)': {
-    header__logo: {
+    logo: {
       width: '130px',
       height: '36px',
     },
-    header__logo_img: {
+    logoImg: {
       width: '130px',
       height: '36px',
     },
-    header__nav: {
+    nav: {
       columnGap: '28px',
     },
-    header__nav_link: {
+    navLink: {
       fontSize: '16px',
     },
-    header__login__btn: {
+    loginBtn: {
       padding: '10px 24px',
     },
   },
@@ -222,22 +218,22 @@ const styles = {
     navToggle: {
       display: 'block',
     },
-    header__logo: {
+    logo: {
       width: '186px',
       height: '52px',
     },
-    header__logo_img: {
+    logoImg: {
       width: '186px',
       height: '52px',
     },
-    header__nav: {
+    nav: {
       display: 'none',
       columnGap: '28px',
     },
-    header__nav_link: {
+    navLink: {
       fontSize: '16px',
     },
-    header__login: {
+    login: {
       display: 'none',
     },
   },

@@ -31,7 +31,9 @@ const styles = {
     flexShrink: 0,
     borderRadius: '24px',
     background: '#ffffff',
-    filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.20))',
+
+    zIndex: 2,
+    overflow: 'hidden',
   },
   sign: {
     height: '40px',

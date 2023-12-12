@@ -87,6 +87,7 @@ const styles = {
   reviews: {
     padding: '112px 0',
     background: 'var(--lightest-grey-color)',
+    zIndex: 1,
   },
   sign: {
     margin: '0 auto',
@@ -138,6 +139,7 @@ const styles = {
     display: 'flex',
     alignItems: 'start',
     justifyContent: 'space-between',
+    filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.20))',
   },
 
   '@media (max-width: 1320px)': {

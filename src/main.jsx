@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-import styled, { createGlobalStyle } from "styled-components";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const Global = createGlobalStyle`
   :root {
@@ -16,6 +16,8 @@ const Global = createGlobalStyle`
     --grey-color: #707377;
     --light-grey-color: #B4B9BF;
     --lightest-grey-color: #EEF2F6;
+    overflow-x: hidden;
+
   }
 
   /* Reset and base styles  */
@@ -29,6 +31,7 @@ const Global = createGlobalStyle`
 body {
   color: var(--text-color);
   background-color: #ffffff;
+  overflow-x: hidden
 }
 
 *,
@@ -140,9 +143,9 @@ legend {
 
 `;
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Global />
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

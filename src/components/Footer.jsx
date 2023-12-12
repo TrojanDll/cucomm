@@ -13,7 +13,7 @@ class Footer extends Component {
     return (
       <footer className={classes.footer}>
         <CustomContainer>
-          {/* <SpriteIcon id="icon-logo-star" className={classes.logoStar} /> */}
+          <SpriteIcon id="icon-logo-star" className={classes.logoStar} />
           <div className={classes.wrapper}>
             <div className={`${classes.footerColumnMobile}`}>
               <SpriteIcon id="icon-logo" className={classes.logoMobile} />
@@ -107,9 +107,9 @@ const styles = {
   footerColumnMobile: {
     display: 'none',
   },
-  // logoStar: {
-  //   display: 'none',
-  // },
+  logoStar: {
+    display: 'none',
+  },
   footer: {
     padding: '102px 0 88px 0',
     position: 'relative',
@@ -173,6 +173,9 @@ const styles = {
     fontWeight: 400,
     lineHeight: '24px',
     color: 'var(--text-color)',
+    '&:hover': {
+      opacity: '0.7',
+    },
   },
   linkBlue: {
     marginTop: '16px',
@@ -217,6 +220,10 @@ const styles = {
   cardLink: {
     width: '56px',
     height: '56px',
+    fill: 'var(--grey-color)',
+    '&:hover': {
+      fill: 'var(--light-grey-color)',
+    },
   },
 
   '@media (max-width: 1320px)': {
@@ -295,14 +302,15 @@ const styles = {
       width: '186px',
       height: '52px',
     },
-    // logoStar: {
-    //   display: 'block',
-    //   position: 'absolute',
-    //   right: '-64px',
-    //   top: '64px',
-    //   width: '289px',
-    //   height: '325px',
-    // },
+    logoStar: {
+      display: 'block',
+      position: 'absolute',
+      right: '-64px',
+      top: '64px',
+      width: '289px',
+      height: '325px',
+      zIndex: -1,
+    },
   },
 
   '@media (max-width: 576px)': {

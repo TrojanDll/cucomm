@@ -142,6 +142,9 @@ const styles = {
     lineHeight: '32px',
     fontSize: '24px',
     cursor: 'pointer',
+    '&:hover': {
+      background: 'var(--hover-color)',
+    },
   },
 
   '@media (max-width: 1320px)': {

@@ -46,6 +46,9 @@ const styles = {
     justifyContent: 'space-between',
     cursor: 'pointer',
     padding: '32px 0',
+    '&:hover': {
+      color: 'var(--main-color)',
+    },
   },
   title: {
     fontSize: '24px',

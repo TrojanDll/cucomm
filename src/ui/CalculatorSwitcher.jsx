@@ -55,16 +55,20 @@ class CalculatorSwitcher extends React.Component {
 const styles = {
   switcher: {
     padding: '3px',
-    width: '324px',
+    paddingLeft: '4px',
+    paddingRight: '4px',
+    width: '325px',
     height: '56px',
     borderRadius: '30px',
     border: '1px solid #B4B9BF',
     display: 'flex',
+    justifyContent: 'space-between',
   },
   switcherSmall: {
     marginTop: '8px',
     width: '298px',
     height: '48px',
+    flexShrink: 0,
   },
   element: {
     display: 'flex',
@@ -79,6 +83,7 @@ const styles = {
     lineHeight: '24px',
     opacity: '0.5',
     color: 'var(--text-color)',
+    flexShrink: 0,
   },
   elementSmall: {
     width: '143px',

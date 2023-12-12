@@ -68,7 +68,7 @@ const styles = {
     backgroundColor: 'var(--lightest-grey-color)',
   },
   benefits: {
-    padding: '88px 109px',
+    padding: '88px 68px',
     width: '100%',
     minHeight: '516px',
     borderRadius: '24px',

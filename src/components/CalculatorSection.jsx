@@ -257,6 +257,10 @@ const styles = {
     fontSize: '18px',
     fontWeight: 600,
     lineHeight: '24px',
+    '&:hover': {
+      border: '1px solid var(--hover-color)',
+      color: 'var(--hover-color)',
+    },
   },
   forYourself: {
     position: 'relative',
@@ -289,7 +293,6 @@ const styles = {
   },
   forYourselfProfitSwitcher: {
     marginTop: '20px',
-    marginBottom: '8px',
     fontSize: '14px',
     fontWeight: 400,
     lineHeight: '20px',

@@ -120,6 +120,9 @@ const styles = {
     fontSize: '18px',
     fontWeight: 400,
     lineHeight: '24px',
+    '&:hover': {
+      opacity: '0.7',
+    },
   },
   navToggle: {
     display: 'none',

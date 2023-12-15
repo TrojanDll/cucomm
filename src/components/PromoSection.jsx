@@ -1,6 +1,6 @@
 import React from 'react';
-import promoImg1 from './../assets/img/promo-img-1.png';
-import promoImg2 from './../assets/img/promo-img-2.png';
+import promoImgPeople from './../assets/img/promo-img-1.png';
+import imgProfiles from './../assets/img/promo-img-2.png';
 import CustomContainer from './CustomContainer';
 import { withStyles } from '@material-ui/styles';
 
@@ -27,39 +27,40 @@ class PromoSection extends React.Component {
             </div>
 
             <div className={classes.buttons}>
-              <button className={`${classes.button} ${classes.button1}`}>Try now</button>
+              <button className={`${classes.button} ${classes.buttonTrynow}`}>Try now</button>
 
-              <button className={`${classes.button} ${classes.button2}`}>Book a demo</button>
+              <button className={`${classes.button} ${classes.buttonBook}`}>Book a demo</button>
             </div>
           </div>
 
           <div className={classes.imgs}>
             <img
               style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
-              className={`${classes.img} ${classes.img1}`}
-              src={promoImg1}
+              className={`${classes.img} ${classes.imgPeople}`}
+              src={promoImgPeople}
               alt="promo-image"
             />
 
             <div
               // style={{ transform: `translateY: ${100}px` }}
-              className={`${classes.img} ${classes.img2}`}>
-              <div className={classes.img2Wrapper}>
+              className={`${classes.img} ${classes.imgProfiles}`}>
+              <div className={classes.imgProfilesWrapper}>
                 <img
                   style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
-                  className={`${classes.img} ${classes.img2Content}`}
-                  src={promoImg2}
+                  className={`${classes.img} ${classes.imgProfilesContent}`}
+                  src={imgProfiles}
                   alt="promo-image"
                 />
-                <div className={classes.img2TextWrapper}>
-                  <div className={`${classes.img2TextItem} ${classes.img2TextItemActive}`}>
+                <div className={classes.imgProfilesTextWrapper}>
+                  <div
+                    className={`${classes.imgProfilesTextItem} ${classes.imgProfilesTextItemActive}`}>
                     PROFILES
                   </div>
-                  <div className={classes.img2TextItem}>COMMON INBOX</div>
-                  <div className={classes.img2TextItem}>STATISTICS</div>
-                  <div className={classes.img2TextItem}>FUNNEL</div>
-                  <div className={classes.img2TextItem}>MESSAGE SCRIPT</div>
-                  <div className={classes.img2TextItem}>USER</div>
+                  <div className={classes.imgProfilesTextItem}>COMMON INBOX</div>
+                  <div className={classes.imgProfilesTextItem}>STATISTICS</div>
+                  <div className={classes.imgProfilesTextItem}>FUNNEL</div>
+                  <div className={classes.imgProfilesTextItem}>MESSAGE SCRIPT</div>
+                  <div className={classes.imgProfilesTextItem}>USER</div>
                 </div>
               </div>
             </div>
@@ -113,7 +114,7 @@ const styles = {
       outline: 'none',
     },
   },
-  button1: {
+  buttonTrynow: {
     border: 'none',
     background: 'var(--main-color)',
     color: '#ffffff',
@@ -121,7 +122,7 @@ const styles = {
       background: 'var(--hover-color)',
     },
   },
-  button2: {
+  buttonBook: {
     background: 'transparent',
     border: '1px solid var(--main-color)',
     color: 'var(--main-color)',
@@ -137,7 +138,7 @@ const styles = {
     right: '0',
     width: '854px',
   },
-  img1: {
+  imgPeople: {
     borderRadius: '24px',
     position: 'absolute',
     top: '0',
@@ -146,7 +147,7 @@ const styles = {
     height: '378px',
     filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2))',
   },
-  img2: {
+  imgProfiles: {
     position: 'absolute',
     right: '109px',
     top: '298px',
@@ -155,20 +156,20 @@ const styles = {
     height: '280px',
     filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2))',
   },
-  img2Wrapper: {
+  imgProfilesWrapper: {
     position: 'relative',
   },
-  img2Content: {
+  imgProfilesContent: {
     width: '100%',
     height: '100%',
     borderRadius: '24px',
   },
-  img2TextWrapper: {
+  imgProfilesTextWrapper: {
     position: 'absolute',
     top: '80px',
     left: '32px',
   },
-  img2TextItem: {
+  imgProfilesTextItem: {
     marginTop: '8px',
     color: 'var(--grey-color)',
     fontSize: '12px',
@@ -179,7 +180,7 @@ const styles = {
       marginTop: 0,
     },
   },
-  img2TextItemActive: {
+  imgProfilesTextItemActive: {
     opacity: 1,
   },
 
@@ -211,13 +212,13 @@ const styles = {
     imgs: {
       height: '395px',
     },
-    img1: {
+    imgPeople: {
       width: '375px',
       height: '226px',
       right: '141px',
       filter: 'drop-shadow(0px 8.605px 25.815px rgba(0, 48, 71, 0.2))',
     },
-    img2: {
+    imgProfiles: {
       top: '202px',
       right: '207px',
       width: '375px',
@@ -225,7 +226,7 @@ const styles = {
       filter: 'drop-shadow(0px 8.605px 25.815px rgba(0, 48, 71, 0.2))',
       transition: 'all 0.3s',
     },
-    img2Content: {
+    imgProfilesContent: {
       borderRadius: '16px',
     },
     title: {
@@ -237,18 +238,18 @@ const styles = {
       fontSize: '22px',
       lineHeight: '30px',
     },
-    img2TextItem: {
+    imgProfilesTextItem: {
       marginTop: '0',
       fontSize: '8px',
       lineHeight: '16px',
     },
-    img2TextWrapper: {
+    imgProfilesTextWrapper: {
       top: '47px',
       left: '14px',
     },
   },
   '@media (max-width: 768px)': {
-    img1: {
+    imgPeople: {
       width: '375px',
       height: '226px',
       right: '44px',
@@ -271,7 +272,7 @@ const styles = {
     imgs: {
       height: '266px',
     },
-    img1: {
+    imgPeople: {
       borderRadius: '8px',
       width: '268px',
       height: '162px',
@@ -279,7 +280,7 @@ const styles = {
       left: 'calc(50% + 24px)',
       transform: 'translateX(-50%)',
     },
-    img2: {
+    imgProfiles: {
       borderRadius: '8px',
       width: '268px',
       height: '120px',
@@ -288,16 +289,16 @@ const styles = {
       left: 'calc(50% - 24px)',
       transform: 'translateX(-50%)',
     },
-    img2TextItem: {
+    imgProfilesTextItem: {
       marginTop: '3px',
       fontSize: '5px',
       lineHeight: '8px',
     },
-    img2TextWrapper: {
+    imgProfilesTextWrapper: {
       top: '34px',
       left: '14px',
     },
-    img2Content: {
+    imgProfilesContent: {
       borderRadius: '8px',
     },
     title: {

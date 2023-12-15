@@ -2,8 +2,8 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import CustomContainer from './CustomContainer';
 import heartImg from './../assets/img/heart.png';
-import agenciesImg1 from './../assets/img/agencies-img-1.png';
-import agenciesImg2 from './../assets/img/agencies-img-2.png';
+import agenciesImgCommon from './../assets/img/agencies-img-1.png';
+import agenciesImgProfile from './../assets/img/agencies-img-2.png';
 import agenciesImgMan from './../assets/img/agencies-man-img.jpg';
 import SpriteIcon from '../ui/SpriteIcon';
 
@@ -18,8 +18,12 @@ class AgenciesSection extends React.Component {
     return (
       <section className={classes.agencies}>
         <CustomContainer>
-          <div className={`${classes.img} ${classes.img1}`}>
-            <img src={agenciesImg1} alt="agenciesImg1" className={`${classes.imgContent}`} />
+          <div className={`${classes.img} ${classes.imgCommon}`}>
+            <img
+              src={agenciesImgCommon}
+              alt="agenciesImgCommon"
+              className={`${classes.imgContent}`}
+            />
 
             <div className={classes.imgTextWrapper}>
               <div className={classes.imgTextItem}>PROFILES</div>
@@ -33,8 +37,8 @@ class AgenciesSection extends React.Component {
             </div>
           </div>
 
-          <div className={`${classes.img} ${classes.img2}`}>
-            <img src={agenciesImg2} alt="agenciesImg2" className={classes.imgContent} />
+          <div className={`${classes.img} ${classes.imgProfile}`}>
+            <img src={agenciesImgProfile} alt="agenciesImg2" className={classes.imgContent} />
 
             <div className={classes.imgTextWrapperProfiles}>
               <div className={`${classes.imgTextItem} ${classes.imgTextItemActive}`}>PROFILES</div>
@@ -95,13 +99,13 @@ const styles = {
     filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2))',
     borderRadius: '24px',
   },
-  img1: {
+  imgCommon: {
     top: '-638px',
     left: 0,
     width: '843px',
     height: '436px',
   },
-  img2: {
+  imgProfile: {
     top: '-462px',
     right: 0,
     width: '625px',
@@ -195,12 +199,12 @@ const styles = {
   },
 
   '@media (max-width: 1320px)': {
-    img1: {
+    imgCommon: {
       width: '675px',
       height: '348px',
       borderRadius: '16px',
     },
-    img2: {
+    imgProfile: {
       width: '500px',
       height: '280px',
       borderRadius: '16px',
@@ -249,10 +253,10 @@ const styles = {
     agencies: {
       paddingTop: '380px',
     },
-    img2: {
+    imgProfile: {
       display: 'none',
     },
-    img1: {
+    imgCommon: {
       top: '-470px',
       width: '100%',
       height: 'auto',
@@ -270,7 +274,7 @@ const styles = {
     agencies: {
       paddingTop: '250px',
     },
-    img1: {
+    imgCommon: {
       top: '-350px',
     },
     listItem: {
@@ -296,7 +300,7 @@ const styles = {
       paddingTop: '110px',
       paddingBottom: '64px',
     },
-    img1: {
+    imgCommon: {
       borderRadius: '8px',
       width: '315px',
       left: '50%',

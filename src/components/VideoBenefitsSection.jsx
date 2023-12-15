@@ -54,32 +54,16 @@ class VideoBenefitsSection extends Component {
     }
 
     // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-      // event.target.playVideo();
-    }
+    function onPlayerReady(event) {}
 
-    const playVideoCustom = () => {
-      // const fn = function () {
-      //   player.playVideo();
-      // };
-      // setTimeout(fn, 2000);
-    };
+    const playVideoCustom = () => {};
 
     // 5. The API calls this function when the player's state changes.
     //    The function indicates that when playing a video (state=1),
     //    the player should play for six seconds and then stop.
     var done = false;
-    function onPlayerStateChange(event) {
-      // if (event.data == YT.PlayerState.PLAYING && !done) {
-      //   setTimeout(stopVideo, 6000);
-      //   done = true;
-      // }
-    }
-    // function stopVideo() {
-    //   player.stopVideo();
-    // }
+    function onPlayerStateChange(event) {}
 
-    // youtubePlayerInit();
     setVideoheight();
 
     return (
@@ -138,9 +122,7 @@ class VideoBenefitsSection extends Component {
                 style={{
                   display: `${isYoutubeShown ? 'block' : 'none'}`,
                   height: `${window.innerWidth <= 576 ? videoHeight + 'px' : ''}`,
-                }}
-                // style={window.innerWidth <= 576 ? { height: videoHeight } : {}}
-              ></iframe>
+                }}></iframe>
             </div>
           </div>
         </CustomContainer>

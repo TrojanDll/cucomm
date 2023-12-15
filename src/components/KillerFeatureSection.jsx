@@ -1,8 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import CustomContainer from './CustomContainer';
-import featureImg1 from './../assets/img/feature-img-1.jpg';
-import featureImg2 from './../assets/img/feature-img-2.jpg';
+import featureImgMan from './../assets/img/feature-img-1.jpg';
+import featureImgWoman from './../assets/img/feature-img-2.jpg';
 
 class KillerFeatureSection extends React.Component {
   constructor(props) {
@@ -20,14 +20,14 @@ class KillerFeatureSection extends React.Component {
           <div className={classes.descr}>One inbox for all your Facebook accounts</div>
 
           <img
-            src={featureImg1}
+            src={featureImgMan}
             alt="man-with-glasses"
-            className={`${classes.img} ${classes.img1}`}
+            className={`${classes.img} ${classes.imgMan}`}
           />
           <img
-            src={featureImg2}
+            src={featureImgWoman}
             alt="woman-with-glasses"
-            className={`${classes.img} ${classes.img2}`}
+            className={`${classes.img} ${classes.imgWoman}`}
           />
         </CustomContainer>
       </section>
@@ -79,20 +79,20 @@ const styles = {
     height: '188px',
     borderRadius: '24px',
   },
-  img1: {
+  imgMan: {
     left: 0,
     top: '-160px',
   },
-  img2: {
+  imgWoman: {
     right: 0,
     bottom: '-104px',
   },
 
   '@media (max-width: 992px)': {
-    img1: {
+    imgMan: {
       display: 'none',
     },
-    img2: {
+    imgWoman: {
       display: 'none',
     },
   },

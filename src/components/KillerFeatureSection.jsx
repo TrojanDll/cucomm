@@ -7,9 +7,58 @@ import featureImg2 from './../assets/img/feature-img-2.jpg';
 class KillerFeatureSection extends React.Component {
   constructor(props) {
     super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.state = {
+      offsetY: 0,
+      scrolledPart: 0,
+    };
+
+    this.intersectionObserver = null;
+    this.parallaxBlockRef = React.createRef();
   }
+
+  handleScroll() {
+    this.setState({ offsetY: window.scrollY });
+    console.log(window.scrollY);
+  }
+
+  componentDidMount() {
+    // window.addEventListener('scroll', this.handleScroll);
+
+    // return () => window.removeEventListener('scroll', this.handleScroll);
+
+    this.intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log('Элемент появился в кадре!');
+
+            this.setState({ scrolledPart: window.scrollY });
+            window.addEventListener('scroll', this.handleScroll);
+          }
+          if (!entry.isIntersecting) {
+            console.log('Элемент вышел из кадра!');
+            window.removeEventListener('scroll', this.handleScroll);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    if (this.parallaxBlockRef.current) {
+      this.intersectionObserver.observe(this.parallaxBlockRef.current);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.parallaxBlockRef.current && this.intersectionObserver) {
+      this.intersectionObserver.unobserve(this.parallaxBlockRef.current);
+    }
+  }
+
   render() {
     const { classes } = this.props;
+    const { offsetY, scrolledPart } = this.state;
 
     return (
       <section className={classes.feature}>
@@ -20,6 +69,8 @@ class KillerFeatureSection extends React.Component {
           <div className={classes.descr}>One inbox for all your Facebook accounts</div>
 
           <img
+            ref={this.parallaxBlockRef}
+            style={{ transform: `translateY(${(offsetY - scrolledPart) * -0.5}px)` }}
             src={featureImg1}
             alt="man-with-glasses"
             className={`${classes.img} ${classes.img1}`}

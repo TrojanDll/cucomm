@@ -7,13 +7,26 @@ import { withStyles } from '@material-ui/styles';
 class PromoSection extends React.Component {
   constructor(props) {
     super(props);
+    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
-      translateY: 0,
+      offsetY: 0,
     };
+
+    this.parallaxBlockRef = React.createRef();
+  }
+
+  handleScroll() {
+    this.setState({ offsetY: window.scrollY });
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+
+    return () => window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
-    const { translateY } = this.state;
+    const { offsetY } = this.state;
     const { classes, isPromoFilter } = this.props;
 
     return (
@@ -42,7 +55,8 @@ class PromoSection extends React.Component {
             />
 
             <div
-              // style={{ transform: `translateY: ${100}px` }}
+              ref={this.parallaxBlockRef}
+              style={{ transform: `translateY(${offsetY * -0.15}px)` }}
               className={`${classes.img} ${classes.img2}`}>
               <div className={classes.img2Wrapper}>
                 <img

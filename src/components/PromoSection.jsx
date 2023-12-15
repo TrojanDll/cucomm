@@ -7,11 +7,14 @@ import { withStyles } from '@material-ui/styles';
 class PromoSection extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      translateY: 0,
+    };
   }
 
   render() {
-    const { isPromoFilter } = this.props;
-    const { classes } = this.props;
+    const { translateY } = this.state;
+    const { classes, isPromoFilter } = this.props;
 
     return (
       <CustomContainer>
@@ -37,12 +40,29 @@ class PromoSection extends React.Component {
               src={promoImg1}
               alt="promo-image"
             />
-            <img
-              style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
-              className={`${classes.img} ${classes.img2}`}
-              src={promoImg2}
-              alt="promo-image"
-            />
+
+            <div
+              // style={{ transform: `translateY: ${100}px` }}
+              className={`${classes.img} ${classes.img2}`}>
+              <div className={classes.img2Wrapper}>
+                <img
+                  style={isPromoFilter ? {} : { filter: 'none', zIndex: '-1' }}
+                  className={`${classes.img} ${classes.img2Content}`}
+                  src={promoImg2}
+                  alt="promo-image"
+                />
+                <div className={classes.img2TextWrapper}>
+                  <div className={`${classes.img2TextItem} ${classes.img2TextItemActive}`}>
+                    PROFILES
+                  </div>
+                  <div className={classes.img2TextItem}>COMMON INBOX</div>
+                  <div className={classes.img2TextItem}>STATISTICS</div>
+                  <div className={classes.img2TextItem}>FUNNEL</div>
+                  <div className={classes.img2TextItem}>MESSAGE SCRIPT</div>
+                  <div className={classes.img2TextItem}>USER</div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </CustomContainer>
@@ -135,6 +155,34 @@ const styles = {
     height: '280px',
     filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2))',
   },
+  img2Wrapper: {
+    position: 'relative',
+  },
+  img2Content: {
+    width: '100%',
+    height: '100%',
+    borderRadius: '24px',
+  },
+  img2TextWrapper: {
+    position: 'absolute',
+    top: '80px',
+    left: '32px',
+  },
+  img2TextItem: {
+    marginTop: '8px',
+    color: 'var(--grey-color)',
+    fontSize: '12px',
+    fontWeight: 600,
+    lineHeight: '20px',
+    opacity: '0.5',
+    '&:first-child': {
+      marginTop: 0,
+    },
+  },
+  img2TextItemActive: {
+    opacity: 1,
+  },
+
   '@media (max-width: 1350px)': {
     promo: {
       flexWrap: 'wrap',
@@ -177,6 +225,9 @@ const styles = {
       filter: 'drop-shadow(0px 8.605px 25.815px rgba(0, 48, 71, 0.2))',
       transition: 'all 0.3s',
     },
+    img2Content: {
+      borderRadius: '16px',
+    },
     title: {
       fontSize: '48px',
       lineHeight: '56px',
@@ -185,6 +236,15 @@ const styles = {
       marginTop: '24px',
       fontSize: '22px',
       lineHeight: '30px',
+    },
+    img2TextItem: {
+      marginTop: '0',
+      fontSize: '8px',
+      lineHeight: '16px',
+    },
+    img2TextWrapper: {
+      top: '47px',
+      left: '14px',
     },
   },
   '@media (max-width: 768px)': {
@@ -227,6 +287,18 @@ const styles = {
       right: 'auto',
       left: 'calc(50% - 24px)',
       transform: 'translateX(-50%)',
+    },
+    img2TextItem: {
+      marginTop: '3px',
+      fontSize: '5px',
+      lineHeight: '8px',
+    },
+    img2TextWrapper: {
+      top: '34px',
+      left: '14px',
+    },
+    img2Content: {
+      borderRadius: '8px',
     },
     title: {
       marginTop: '40px',

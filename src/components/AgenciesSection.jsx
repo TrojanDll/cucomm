@@ -18,8 +18,34 @@ class AgenciesSection extends React.Component {
     return (
       <section className={classes.agencies}>
         <CustomContainer>
-          <img src={agenciesImg1} alt="agenciesImg1" className={`${classes.img} ${classes.img1}`} />
-          <img src={agenciesImg2} alt="agenciesImg2" className={`${classes.img} ${classes.img2}`} />
+          <div className={`${classes.img} ${classes.img1}`}>
+            <img src={agenciesImg1} alt="agenciesImg1" className={`${classes.imgContent}`} />
+
+            <div className={classes.imgTextWrapper}>
+              <div className={classes.imgTextItem}>PROFILES</div>
+              <div className={`${classes.imgTextItem} ${classes.imgTextItemActive}`}>
+                COMMON INBOX
+              </div>
+              <div className={classes.imgTextItem}>STATISTICS</div>
+              <div className={classes.imgTextItem}>FUNNEL</div>
+              <div className={classes.imgTextItem}>MESSAGE SCRIPT</div>
+              <div className={classes.imgTextItem}>USER</div>
+            </div>
+          </div>
+
+          <div className={`${classes.img} ${classes.img2}`}>
+            <img src={agenciesImg2} alt="agenciesImg2" className={classes.imgContent} />
+
+            <div className={classes.imgTextWrapperProfiles}>
+              <div className={`${classes.imgTextItem} ${classes.imgTextItemActive}`}>PROFILES</div>
+              <div className={classes.imgTextItem}>COMMON INBOX</div>
+              <div className={classes.imgTextItem}>STATISTICS</div>
+              <div className={classes.imgTextItem}>FUNNEL</div>
+              <div className={classes.imgTextItem}>MESSAGE SCRIPT</div>
+              <div className={classes.imgTextItem}>USER</div>
+            </div>
+          </div>
+
           <img src={agenciesImgMan} alt="agenciesImg2" className={classes.imgMan} />
 
           <h2 className={classes.title}>
@@ -80,6 +106,35 @@ const styles = {
     right: 0,
     width: '625px',
     height: '350px',
+  },
+  imgTextWrapper: {
+    position: 'absolute',
+    top: '73px',
+    left: '32px',
+  },
+  imgTextWrapperProfiles: {
+    position: 'absolute',
+    top: '80px',
+    left: '26px',
+  },
+  imgTextItem: {
+    marginTop: '8px',
+    color: 'var(--grey-color)',
+    fontSize: '12px',
+    fontWeight: 600,
+    lineHeight: '20px',
+    opacity: '0.5',
+    '&:first-child': {
+      marginTop: 0,
+    },
+  },
+  imgTextItemActive: {
+    opacity: 1,
+  },
+  imgContent: {
+    width: '100%',
+    height: '100%',
+    borderRadius: '24px',
   },
   imgMan: {
     position: 'absolute',
@@ -150,6 +205,24 @@ const styles = {
       height: '280px',
       borderRadius: '16px',
     },
+    imgTextWrapper: {
+      position: 'absolute',
+      top: '53px',
+      left: '22px',
+    },
+    imgTextWrapperProfiles: {
+      top: '64px',
+      left: '23px',
+    },
+    imgTextItem: {
+      fontSize: '10px',
+      lineHeight: '18px',
+    },
+    imgContent: {
+      width: '100%',
+      height: '100%',
+      borderRadius: '16px',
+    },
     list: {
       flexWrap: 'wrap',
       rowGap: '48px',
@@ -187,6 +260,10 @@ const styles = {
     imgMan: {
       display: 'none',
     },
+    imgTextWrapper: {
+      top: '59px',
+      left: '22px',
+    },
   },
 
   '@media (max-width: 768px)': {
@@ -202,6 +279,16 @@ const styles = {
         display: 'none',
       },
     },
+    imgTextItem: {
+      marginTop: '0',
+      fontSize: '8px',
+      lineHeight: '16px',
+    },
+    imgTextWrapper: {
+      position: 'absolute',
+      top: '47px',
+      left: '19px',
+    },
   },
 
   '@media (max-width: 576px)': {
@@ -216,6 +303,20 @@ const styles = {
       transform: 'translateX(-50%)',
       top: '-200px',
       filter: 'drop-shadow(0px 7.477px 22.431px rgba(0, 48, 71, 0.20))',
+    },
+    imgTextItem: {
+      marginTop: '3px',
+      fontSize: '5px',
+      lineHeight: '8px',
+    },
+    imgTextWrapper: {
+      top: '26px',
+      left: '9px',
+    },
+    imgContent: {
+      width: '100%',
+      height: '100%',
+      borderRadius: '8px',
     },
     title: {
       fontSize: '32px',

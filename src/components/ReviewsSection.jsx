@@ -6,6 +6,7 @@ import ReviewsItem from './ReviewsItem';
 import profileImg1 from './../assets/img/reviewer1.png';
 import profileImg2 from './../assets/img/reviewer2.png';
 import profileImg3 from './../assets/img/reviewer3.png';
+import TrustpilotStars from '../ui/TrustpilotStars';
 
 class ReviewsSection extends Component {
   constructor(props) {
@@ -49,7 +50,9 @@ class ReviewsSection extends Component {
 
           <div className={classes.rate}>
             Our customers say <span>Great</span>{' '}
-            <SpriteIcon className={classes.starsImg} id="icon-trustpilot-raiting" />
+            <div className={classes.starsImg}>
+              <TrustpilotStars barColor="#00b67a" barWidth="calc(84%)" />
+            </div>
             4.1 out of 5 based on XX reviews
             <SpriteIcon className={classes.trustpilotImg} id="icon-trustpilot-logo" />
           </div>
@@ -125,6 +128,7 @@ const styles = {
     },
   },
   starsImg: {
+    display: 'inline-block',
     width: '127px',
     height: '24px',
     flexShrink: 0,

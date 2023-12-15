@@ -2,6 +2,7 @@ import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
 import CustomContainer from './CustomContainer';
 import SpriteIcon from '../ui/SpriteIcon';
+import TrustpilotStars from '../ui/TrustpilotStars';
 
 class Footer extends Component {
   constructor(props) {
@@ -21,7 +22,16 @@ class Footer extends Component {
 
             <div className={classes.footerColumn}>
               <SpriteIcon id="icon-logo" className={classes.logo} />
-              <SpriteIcon id="icon-trustpilot-rating-footer" className={classes.trustpilotImg} />
+
+              <div className={classes.trustpilotImg}>
+                <SpriteIcon
+                  id="icon-trustpilot-rating-footer"
+                  className={classes.trustpilotImgTrustpilot}
+                />
+                <div className={classes.trustpilotImgStars}>
+                  <TrustpilotStars barWidth="84%" barColor="#707377" />
+                </div>
+              </div>
               <div className={classes.trustScore}>
                 TrustScore <span>4.1 | XX</span> reviews
               </div>
@@ -138,7 +148,17 @@ const styles = {
     marginTop: '26px',
     width: '158px',
     height: '75px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     flexShrink: 0,
+  },
+  trustpilotImgTrustpilot: {
+    width: '120px',
+    height: '29px',
+  },
+  trustpilotImgStars: {
+    height: '30px',
   },
   trustScore: {
     marginTop: '16px',

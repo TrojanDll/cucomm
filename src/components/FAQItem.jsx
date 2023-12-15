@@ -71,13 +71,15 @@ const styles = {
   },
   descr: {
     overflow: 'hidden',
+    height: 'auto',
     maxHeight: 0,
     fontSize: '18px',
     fontWeight: 400,
+    paddingBottom: '0',
     transition: 'all 0.3s',
   },
   descrActive: {
-    maxHeight: '500px',
+    maxHeight: '200px',
     paddingBottom: '32px',
   },
 

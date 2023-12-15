@@ -21,11 +21,35 @@ class FunctionalSection extends Component {
               <div className={classes.itemText}>Detailed in-depth statistics</div>
             </div>
 
-            <img className={classes.img} src={statistics} alt="" />
+            <div className={classes.img}>
+              <img className={classes.imgContent} src={statistics} alt="statistics" />
+
+              <div className={classes.imgTextWrapper}>
+                <div className={classes.imgTextItem}>PROFILES</div>
+                <div className={classes.imgTextItem}>COMMON INBOX</div>
+                <div className={`${classes.imgTextItem} ${classes.imgTextItemActive}`}>
+                  STATISTICS
+                </div>
+                <div className={classes.imgTextItem}>FUNNEL</div>
+                <div className={classes.imgTextItem}>MESSAGE SCRIPT</div>
+                <div className={classes.imgTextItem}>USER</div>
+              </div>
+            </div>
           </div>
 
           <div className={classes.item}>
-            <img className={`${classes.img} ${classes.imgLeftSide}`} src={funnel} alt="" />
+            <div className={`${classes.img} ${classes.imgLeftSide}`}>
+              <img className={classes.imgContent} src={funnel} alt="funnel" />
+
+              <div className={classes.imgTextWrapper}>
+                <div className={classes.imgTextItem}>PROFILES</div>
+                <div className={classes.imgTextItem}>COMMON INBOX</div>
+                <div className={classes.imgTextItem}>STATISTICS</div>
+                <div className={`${classes.imgTextItem} ${classes.imgTextItemActive}`}>FUNNEL</div>
+                <div className={classes.imgTextItem}>MESSAGE SCRIPT</div>
+                <div className={classes.imgTextItem}>USER</div>
+              </div>
+            </div>
 
             <div className={classes.itemTextWrapper}>
               <SpriteIcon className={classes.itemImg} id="icon-crm" />
@@ -119,6 +143,30 @@ const styles = {
     borderRadius: '24px',
     zIndex: 2,
   },
+  imgContent: {
+    width: '100%',
+    height: '100%',
+    borderRadius: '24px',
+  },
+  imgTextWrapper: {
+    position: 'absolute',
+    top: '73px',
+    left: '32px',
+  },
+  imgTextItem: {
+    marginTop: '8px',
+    color: 'var(--grey-color)',
+    fontSize: '12px',
+    fontWeight: 600,
+    lineHeight: '20px',
+    opacity: '0.5',
+    '&:first-child': {
+      marginTop: 0,
+    },
+  },
+  imgTextItemActive: {
+    opacity: 1,
+  },
   imgLeftSide: {
     top: 'auto',
     bottom: 0,
@@ -179,6 +227,13 @@ const styles = {
       marginTop: '36px',
       order: 2,
     },
+    imgTextWrapper: {
+      top: '73px',
+      left: '37px',
+    },
+    imgContent: {
+      borderRadius: '16px',
+    },
     list: {
       display: 'flex',
       position: 'absolute',
@@ -197,6 +252,15 @@ const styles = {
       width: '100%',
       height: 'auto',
     },
+    imgTextWrapper: {
+      top: '70px',
+      left: '22px',
+    },
+    imgTextItem: {
+      marginTop: '0',
+      fontSize: '10px',
+      lineHeight: '20px',
+    },
     list: {
       top: '265px',
     },
@@ -205,6 +269,16 @@ const styles = {
   '@media (max-width: 768px)': {
     functional: {
       minHeight: '2200px',
+    },
+    imgTextWrapper: {
+      position: 'absolute',
+      top: '50px',
+      left: '19px',
+    },
+    imgTextItem: {
+      marginTop: '0',
+      fontSize: '8px',
+      lineHeight: '16px',
     },
     list: {
       top: '300px',
@@ -221,6 +295,18 @@ const styles = {
     img: {
       borderRadius: '12px',
       width: '315px',
+    },
+    imgTextItem: {
+      marginTop: '3px',
+      fontSize: '5px',
+      lineHeight: '8px',
+    },
+    imgTextWrapper: {
+      top: '26px',
+      left: '9px',
+    },
+    imgContent: {
+      borderRadius: '8px',
     },
     itemText: {
       fontSize: '32px',

@@ -27,7 +27,9 @@ class TrustpilotStars extends Component {
           <SpriteIcon className={classes.starImg} id="icon-trustpilot-star" />
         </div>
 
-        <div style={{ backgroundColor: barColor, width: barWidth }} className={classes.bar}></div>
+        <div
+          style={{ backgroundColor: barColor ? barColor : '#707377', width: barWidth }}
+          className={classes.bar}></div>
         <div className={classes.barBg}></div>
       </div>
     );

@@ -29,7 +29,7 @@ class Footer extends Component {
                   className={classes.trustpilotImgTrustpilot}
                 />
                 <div className={classes.trustpilotImgStars}>
-                  <TrustpilotStars barWidth="84%" barColor="#707377" />
+                  <TrustpilotStars barWidth="84%" />
                 </div>
               </div>
               <div className={classes.trustScore}>
@@ -326,7 +326,7 @@ const styles = {
       display: 'block',
       position: 'absolute',
       right: '-64px',
-      top: '64px',
+      top: '125px',
       width: '289px',
       height: '325px',
       zIndex: -1,

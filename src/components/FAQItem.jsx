@@ -8,7 +8,20 @@ class FAQItem extends Component {
     this.state = {
       isDescrOpened: this.props.setDescrOpened,
     };
+
+    this.descrRef = React.createRef();
   }
+
+  componentDidUpdate() {
+    const descr = this.descrRef.current;
+
+    if (this.state.isDescrOpened) {
+      descr.style.maxHeight = descr.scrollHeight + 'px';
+    } else {
+      descr.style.maxHeight = null;
+    }
+  }
+
   render() {
     const { classes, title, descr } = this.props;
     const { isDescrOpened } = this.state;
@@ -29,7 +42,9 @@ class FAQItem extends Component {
           />
         </div>
 
-        <div className={`${classes.descr} ${isDescrOpened ? classes.descrActive : ''}`}>
+        <div
+          ref={this.descrRef}
+          className={`${classes.descr} ${isDescrOpened ? classes.descrActive : ''}`}>
           {descr}
         </div>
       </div>
@@ -40,6 +55,7 @@ class FAQItem extends Component {
 const styles = {
   faqItem: {
     borderBottom: '1px solid var(--light-grey-color)',
+    boxSizing: 'content-box',
   },
   header: {
     display: 'flex',
@@ -73,13 +89,14 @@ const styles = {
     overflow: 'hidden',
     height: 'auto',
     maxHeight: 0,
+    willChange: 'maxHeight',
     fontSize: '18px',
     fontWeight: 400,
     paddingBottom: '0',
-    transition: 'all 0.3s',
+    boxSizing: 'content-box',
+    transition: 'all 0.3s ease-out',
   },
   descrActive: {
-    maxHeight: '200px',
     paddingBottom: '32px',
   },
 

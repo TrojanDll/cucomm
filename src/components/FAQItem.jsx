@@ -12,6 +12,16 @@ class FAQItem extends Component {
     this.descrRef = React.createRef();
   }
 
+  componentDidMount() {
+    const descr = this.descrRef.current;
+
+    if (this.state.isDescrOpened) {
+      descr.style.maxHeight = descr.scrollHeight + 'px';
+    } else {
+      descr.style.maxHeight = null;
+    }
+  }
+
   componentDidUpdate() {
     const descr = this.descrRef.current;
 

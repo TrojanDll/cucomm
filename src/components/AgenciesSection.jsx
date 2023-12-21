@@ -96,7 +96,7 @@ const styles = {
 
   img: {
     position: 'absolute',
-    filter: 'drop-shadow(0px 20px 60px rgba(0, 48, 71, 0.2))',
+    boxShadow: '0px 20px 60px rgba(0, 48, 71, 0.2)',
     borderRadius: '24px',
   },
   imgCommon: {
@@ -306,7 +306,7 @@ const styles = {
       left: '50%',
       transform: 'translateX(-50%)',
       top: '-200px',
-      filter: 'drop-shadow(0px 7.477px 22.431px rgba(0, 48, 71, 0.20))',
+      boxShadow: '0px 7.477px 22.431px rgba(0, 48, 71, 0.20)',
     },
     imgTextItem: {
       marginTop: '3px',

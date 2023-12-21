@@ -221,7 +221,7 @@ const styles = {
       textAlign: 'center',
     },
     img: {
-      position: 'static',
+      position: 'relative',
       display: 'block',
       margin: '0 auto',
       marginTop: '36px',

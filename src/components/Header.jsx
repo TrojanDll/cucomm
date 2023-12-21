@@ -167,6 +167,11 @@ const styles = {
     lineHeight: '24px',
     border: 'none',
     borderRadius: '9999px',
+    fontWeight: 400,
+    background: 'transparent',
+    '&:hover': {
+      opacity: '0.7',
+    },
   },
   signupBtn: {
     padding: '12px 32px',
@@ -184,10 +189,6 @@ const styles = {
     borderRadius: '9999px',
     fontSize: '18px',
     lineHeight: '24px',
-  },
-  loginBtn: {
-    fontWeight: 400,
-    background: 'transparent',
   },
   signupBtn: {
     background: 'var(--main-color)',

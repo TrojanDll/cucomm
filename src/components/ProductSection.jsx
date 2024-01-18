@@ -61,8 +61,8 @@ const styles = {
   },
   sign: {
     margin: '0 auto',
-    width: '85px',
     display: 'flex',
+    width: 'fit-content',
     alignItems: 'center',
     borderRadius: '9999px',
     textTransform: 'uppercase',
@@ -73,7 +73,7 @@ const styles = {
     fontWeight: 500,
     color: 'var(--main-color)',
     background: '#ffffff',
-    padding: '0 16px',
+    padding: '8px 16px',
   },
   title: {
     marginTop: '24px',

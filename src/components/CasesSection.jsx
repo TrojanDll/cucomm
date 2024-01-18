@@ -108,7 +108,7 @@ const styles = {
   },
   sign: {
     margin: '0 auto',
-    width: '69px',
+    width: 'fit-content',
     height: '40px',
     display: 'flex',
     alignItems: 'center',
@@ -120,7 +120,7 @@ const styles = {
     fontWeight: 500,
     color: 'var(--main-color)',
     background: '#ffffff',
-    padding: '0 16px',
+    padding: '8px 16px',
   },
   title: {
     marginTop: '24px',

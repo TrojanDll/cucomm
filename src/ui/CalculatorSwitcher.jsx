@@ -63,7 +63,7 @@ const styles = {
     justifyContent: 'space-between',
   },
   switcherSmall: {
-    marginTop: '8px',
+    marginTop: '6px',
     width: '298px',
     height: '50px',
     flexShrink: 0,
